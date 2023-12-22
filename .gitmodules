@@ -1,0 +1,18 @@
+[submodule "mtb-pdl-cat1"]
+	path = mtb-pdl-cat1
+	url = https://github.com/Infineon/mtb-pdl-cat1.git
+[submodule "cat1cm0p"]
+	path = cat1cm0p
+	url = https://github.com/Infineon/cat1cm0p.git
+[submodule "core-lib"]
+	path = core-lib
+	url = https://github.com/Infineon/core-lib.git
+[submodule "retarget-io"]
+	path = retarget-io
+	url = https://github.com/Infineon/retarget-io.git
+[submodule "serial-flash"]
+	path = serial-flash
+	url = https://github.com/Infineon/serial-flash.git
+[submodule "psoc6hal"]
+	path = psoc6hal
+	url = https://github.com/Infineon/psoc6hal.git

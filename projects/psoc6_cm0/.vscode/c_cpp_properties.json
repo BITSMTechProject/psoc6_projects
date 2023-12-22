@@ -1,0 +1,50 @@
+{
+    "version": 4,
+    "env": {
+        "mtbCompilerArgs": [
+            "-c",
+            "-mcpu=cortex-m4",
+            "-g",
+            "-Wall"
+        ],
+        "mtbDefaultIncludePath": [
+            "."
+        ],
+        "mtbDefaultDefines": [
+            "COMPONENT_CAT1",
+            "COMPONENT_CAT1A",
+            "COMPONENT_CM0P_SLEEP",
+            "COMPONENT_CM4",
+            "DEBUG",
+            "__GNUC__"
+        ]
+    },
+    "configurations": [
+        {
+            "name": "MTB",
+            "compilerPath": "C:/Infineon/Tools/ModusToolbox/tools_2.4/gcc/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "${mtbCompilerArgs}"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "includePath": [
+                "${mtbDefaultIncludePath}",
+                "../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/include",
+                "../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/include/ip",
+                "../../mtb-pdl-cat1/cmsis/include",
+                "../../core-lib/include",
+                "../../mtb-pdl-cat1/drivers/include",
+                "../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "defines": [
+                "${mtbDefaultDefines}"
+            ]
+        }
+    ]
+}

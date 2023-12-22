@@ -1,0 +1,38 @@
+{
+    //mtb//  Added by build system's vscode target
+    //mtb//
+    //mtb//  If this project will be shared with multiple users, the
+    //mtb//  modustoolbox.toolsPath property must be placed in user settings
+    //mtb//  file instead of this file.  The user settings file location for
+    //mtb//  VSCode depends on your OS:
+    //mtb//
+    //mtb//      Windows: %APPDATA%\Code\User\settings.json
+    //mtb//      macOS  : $HOME/Library/Application Support/Code/User/settings.json
+    //mtb//      Linux  : $HOME/.config/Code/User/settings.json
+    //mtb//
+    "modustoolbox.toolsPath": "C:/Infineon/Tools/ModusToolbox/tools_2.4/",
+    "cortex-debug.armToolchainPath": "C:/Infineon/Tools/ModusToolbox/tools_2.4/gcc/bin",
+    "cortex-debug.openocdPath": "C:/Infineon/Tools/ModusToolbox/tools_2.4/openocd/bin/openocd",
+    "terminal.integrated.profiles.windows": {
+        "Cygwin": {
+          "source": "PowerShell",
+          "args": ["C:\\cygwin64\\bin\\bash.exe --login -i"]
+        },
+        "PowerShell -NoProfile": {
+          "source": "PowerShell",
+          "args": ["-NoProfile"]
+        }
+      },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "files.associations": {
+      "gpio_psoc6_02_100_wlcsp.h": "c",
+      "cy_pdl.h": "c",
+      "system_psoc6.h": "c",
+      "cy_device.h": "c",
+      "cy_device_headers.h": "c",
+      "gpio_psoc6_02_124_bga.h": "c"
+    },
+    "C_Cpp.dimInactiveRegions": false,
+    "cortex-debug.variableUseNaturalFormat": false,
+    "C_Cpp.errorSquiggles": "enabled",
+}
