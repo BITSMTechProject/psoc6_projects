@@ -10,7 +10,7 @@ ASMFILE2 = ../../mtb-pdl-cat1/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.S
 
 # C source files
 CFILES += \
-	 ../../cat1cm0p/COMPONENT_CAT1A/COMPONENT_CM0P_SLEEP/psoc6_02_cm0p_sleep.c	\
+	 ../psoc6_cm0/out/psoc6_cm0.c	\
 	 ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/source/cy_device.c	\
 	 ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/system_psoc6_cm4.c	\
 	 ../../mtb-pdl-cat1/drivers/source/cy_ipc_pipe.c	\
@@ -49,7 +49,7 @@ CFLAGS = \
 PSOC6_LD = ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
 
 OBJECTS += \
-	out/psoc6_02_cm0p_sleep.o \
+	out/psoc6_cm0.o \
 	out/startup_psoc6_02_cm4.o \
 	out/cy_syslib_gcc.o \
 	out/system_psoc6_cm4.o \

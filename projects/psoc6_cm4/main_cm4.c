@@ -15,7 +15,7 @@
 #include "cy_device.h"
 #include <gpio_psoc6_02_124_bga.h>
 
-const char* string = "HelloWorld\n";
+const char* string = "HelloWorld : ";
 
 /* Assign pins for UART on SCB5: P5[0], P5[1] */
 #define UART            SCB5
@@ -25,7 +25,7 @@ const char* string = "HelloWorld\n";
 #define UART_TX_NUM     P5_1_NUM
 
 /* Assign divider type and number for UART */
-#define UART_CLK_DIV_TYPE     (CY_SYSCLK_DIV_8_BIT)
+#define UART_CLK_DIV_TYPE     (CY_SYSCLK_DIV_16_BIT)
 #define UART_CLK_DIV_NUMBER   (0U)
 
 /* Allocate context for UART operation */
@@ -102,10 +102,13 @@ int main(void)
 
     /* Enable global interrupts */
     __enable_irq();
+    uint32_t count = 0;
 
      while(1)
     {
         Cy_SCB_UART_PutString(UART, string);
+        Cy_SCB_UART_Put(UART, count++);
+        Cy_SCB_UART_PutString(UART, "\n");
         Cy_SysLib_Delay(1000);
     }
 
