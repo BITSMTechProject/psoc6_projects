@@ -3,20 +3,26 @@ TARGET_SEL = -mcpu=cortex-m4
 TGTFLAGS = $(TARGET_SEL) -mfpu=fpv4-sp-d16 
 ######################################################################################################
 
-PSOC6_TARGET = out/hello_world
+PSOC6_TARGET = out/psoc6_cm4
 
-ASMFILES = ../../psoc6pdl/devices/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/startup_psoc6_02_cm4.S
-
-# ASM source files
-ASMFILES += \
-	   ../../psoc6pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.S
+ASMFILE1 = ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/startup_psoc6_02_cm4.S
+ASMFILE2 = ../../mtb-pdl-cat1/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.S
 
 # C source files
 CFILES += \
 	 ../../cat1cm0p/COMPONENT_CAT1A/COMPONENT_CM0P_SLEEP/psoc6_02_cm0p_sleep.c	\
-	 ../../psoc6pdl/devices/templates/COMPONENT_MTB/COMPONENT_CM4/system_psoc6_cm4.c	\
-	 ../../psoc6pdl/drivers/source/cy_gpio.c	\
-	 ../../psoc6pdl/drivers/source/cy_syslib.c	\
+	 ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/source/cy_device.c	\
+	 ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/system_psoc6_cm4.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_ipc_pipe.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_ipc_drv.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_ipc_sema.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_wdt.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_sysint.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_sysclk.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_gpio.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_syslib.c	\
+	../../mtb-pdl-cat1/drivers/source/cy_scb_common.c	\
+	 ../../mtb-pdl-cat1/drivers/source/cy_scb_uart.c	\
 	 main_cm4.c
 
 # Assembler command line arguments.
@@ -28,21 +34,31 @@ CFLAGS = \
 	-Os --specs=nano.specs -Og -mfloat-abi=softfp $(TGTFLAGS) \
 	-mthumb -ffunction-sections -fdata-sections -g \
 	-I. \
+	-I../../../mtb-pdl-cat1/cmsis/include \
+	-I../../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/include \
+	-I../../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB \
+	-I../../../mtb-pdl-cat1/drivers/include	\
 	-I../../../core-lib/include \
-	-I../../../psoc6pdl/devices/include \
-	-I../../../psoc6pdl/cmsis/include \
-	-I../../../psoc6pdl/devices/templates/COMPONENT_MTB \
-	-I../../../psoc6pdl/drivers/include \
-	-DCY8C624ABZI-S2D44
+	-I../../../psoc6hal/include \
+	-I../../../psoc6hal/COMPONENT_PSOC6HAL/include \
+	-I../../../psoc6hal/COMPONENT_PSOC6HAL/include/triggers \
+	-I../../../psoc6hal/COMPONENT_PSOC6HAL/include/pin_packages \
+	-I../../../retarget-io \
+	-DCY8C624ABZI_S2D44 -DCY_IPC_DEFAULT_CFG_DISABLE
 
-PSOC6_LD = ../../TARGET_CY8CPROTO-062-4343W/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/linker.ld
+PSOC6_LD = ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
 
 OBJECTS += \
 	out/psoc6_02_cm0p_sleep.o \
+	out/startup_psoc6_02_cm4.o \
 	out/cy_syslib_gcc.o \
-	out/startup_psoc6_02_cm4.o 	\
+	out/system_psoc6_cm4.o \
 	out/cy_gpio.o 	\
 	out/cy_syslib.o 	\
+	out/cy_sysclk.o 	\
+	out/cy_device.o 	\
+	out/cy_scb_common.o 	\
+	out/cy_scb_uart.o 	\
 	out/main_cm4.o
 
 # Path to compiler/linker tools.
@@ -75,8 +91,8 @@ ofiles : $(CFILES) $(ASMFILES)
 	 @echo "---------------------"
 	 @echo "Building the ASM files"
 	 @echo "---------------------"
-	 $(AS) $(AFLAGS) ../../TARGET_CY8CPROTO-062-4343W/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/startup_psoc6_02_cm4.S -o out/startup_psoc6_02_cm4.o
-	 $(AS) $(AFLAGS) ../../psoc6pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.s -o out/cy_syslib_gcc.o
+	 $(AS) $(AFLAGS) $(ASMFILE1) -o out/startup_psoc6_02_cm4.o
+	 $(AS) $(AFLAGS) $(ASMFILE2) -o out/cy_syslib_gcc.o
 	 @echo "-------------------"
 	 @echo "Building the C files"
 	 @echo "-------------------"

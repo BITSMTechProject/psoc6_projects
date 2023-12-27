@@ -5,6 +5,8 @@ TGTFLAGS =  $(TARGET_SEL)
 
 PSOC6_TARGET = out/psoc6_cm0
 
+BIN2C = python ../../cat1cm0p/bin2c.py
+
 ASMFILE1 = ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM0P/TOOLCHAIN_GCC_ARM/startup_psoc6_02_cm0plus.S
 ASMFILE2 = ../../mtb-pdl-cat1/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.S
 
@@ -36,7 +38,7 @@ CFLAGS = \
 	-I../../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB \
 	-I../../../mtb-pdl-cat1/drivers/include	\
 	-I../../../core-lib/include \
-	-DCY8C6248BZI_S2D44
+	-DCY8C624ABZI_S2D44
 
 
 PSOC6_LD = ../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM0P/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm0plus.ld
@@ -103,13 +105,15 @@ $(PSOC6_TARGET).elf : $(OBJECTS) $(PSOC6_LD)
 	@echo "--------------------"
 	@echo "Linking the elf file obj" $@
 	@echo "--------------------"
-	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf $(OBJECTS) 
+	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=cy_m0p_image -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf $(OBJECTS) 
 
 $(PSOC6_TARGET).hex : $(PSOC6_TARGET).elf
 	@echo "-------------------------"
 	@echo "Building the hex file" $@
 	@echo "-------------------------"
 	$(OC) -O ihex $(PSOC6_TARGET).elf $(PSOC6_TARGET).hex
+	$(OC) -O binary $(PSOC6_TARGET).elf $(PSOC6_TARGET).bin
+	$(BIN2C) $(PSOC6_TARGET).bin $(PSOC6_TARGET).c
 	@echo "-------------------------"
 	@echo "Building the list file" $@
 	@echo "--------------------------"

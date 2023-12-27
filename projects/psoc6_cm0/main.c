@@ -52,7 +52,7 @@ cy_stc_gpio_pin_config_t pinConfig = {
         /*.hsiom =*/        P13_7_GPIO,              /* Software controlled pin */
         /*.intEdge =*/      CY_GPIO_INTR_RISING,    /* Rising edge interrupt */
         /*.intMask =*/      1UL,                    /* Enable port interrupt for this pin */
-        /*.vtrip =*/        1,     /* CMOS voltage trip */
+        /*.vtrip =*/        CY_GPIO_VTRIP_CMOS,     /* CMOS voltage trip */
         /*.slewRate =*/     0,      /* Fast slew rate */
         /*.driveSel =*/     0,     /* Full drive strength */
         /*.vregEn =*/       0UL,                    /* SIO-specific setting - ignored */
@@ -70,20 +70,17 @@ int main(void)
 
     Cy_GPIO_Pin_Init(P13_7_PORT, P13_7_PIN, &pinConfig);
 
+	/* Enable CM4. CY_CORTEX_M4_APPL_ADDR must be updated if CM4 memory layout is changed. */
+    Cy_SysEnableCM4(CY_CORTEX_M4_APPL_ADDR);
     
     while (1) {
         Cy_GPIO_Inv(P13_7_PORT, P13_7_PIN);
         Cy_SysLib_Delay(1000);
     }
 
-    // /* Enable CM4. CY_CORTEX_M4_APPL_ADDR must be updated if CM4 memory layout is changed. */
-    // Cy_SysEnableCM4(CY_CORTEX_M4_APPL_ADDR);
+    
 
-    // for (;;)
-    // {
-    //     Cy_SysPm_DeepSleep(CY_SYSPM_WAIT_FOR_INTERRUPT);
-    // }
-    while(1);
+    
 }
 
 /* [] END OF FILE */

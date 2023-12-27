@@ -36,7 +36,14 @@
                 "../../mtb-pdl-cat1/cmsis/include",
                 "../../core-lib/include",
                 "../../mtb-pdl-cat1/drivers/include",
-                "../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB"
+                "../../mtb-pdl-cat1/drivers/source",
+                "../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB",
+                "../../psoc6hal/include/",
+                "../../psoc6hal/COMPONENT_PSOC6HAL/include",
+                "../../psoc6hal/COMPONENT_PSOC6HAL/include/triggers",
+                "../../psoc6hal/COMPONENT_PSOC6HAL/include/pin_packages",
+                "../../psoc6hal/COMPONENT_PSOC6HAL/source",
+                "../../retarget-io"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,

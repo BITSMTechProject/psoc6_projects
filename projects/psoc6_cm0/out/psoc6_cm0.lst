@@ -6,30 +6,30 @@ Disassembly of section .text:
 
 10000000 <__Vectors>:
 10000000:	08002000 	.word	0x08002000
-10000004:	10000bb7 	.word	0x10000bb7
+10000004:	10000c53 	.word	0x10000c53
 10000008:	0000000d 	.word	0x0000000d
-1000000c:	10000c19 	.word	0x10000c19
+1000000c:	10000cb5 	.word	0x10000cb5
 	...
-1000002c:	10000c15 	.word	0x10000c15
+1000002c:	10000cb1 	.word	0x10000cb1
 	...
-10000038:	10000c15 	.word	0x10000c15
-1000003c:	10000c15 	.word	0x10000c15
-10000040:	10000c15 	.word	0x10000c15
-10000044:	10000c15 	.word	0x10000c15
-10000048:	10000c15 	.word	0x10000c15
-1000004c:	10000c15 	.word	0x10000c15
-10000050:	10000c15 	.word	0x10000c15
-10000054:	10000c15 	.word	0x10000c15
-10000058:	10000c15 	.word	0x10000c15
-1000005c:	10000c15 	.word	0x10000c15
-10000060:	10000c15 	.word	0x10000c15
-10000064:	10000c15 	.word	0x10000c15
-10000068:	10000c15 	.word	0x10000c15
-1000006c:	10000c15 	.word	0x10000c15
-10000070:	10000c15 	.word	0x10000c15
-10000074:	10000c15 	.word	0x10000c15
-10000078:	10000c15 	.word	0x10000c15
-1000007c:	10000c15 	.word	0x10000c15
+10000038:	10000cb1 	.word	0x10000cb1
+1000003c:	10000cb1 	.word	0x10000cb1
+10000040:	10000cb1 	.word	0x10000cb1
+10000044:	10000cb1 	.word	0x10000cb1
+10000048:	10000cb1 	.word	0x10000cb1
+1000004c:	10000cb1 	.word	0x10000cb1
+10000050:	10000cb1 	.word	0x10000cb1
+10000054:	10000cb1 	.word	0x10000cb1
+10000058:	10000cb1 	.word	0x10000cb1
+1000005c:	10000cb1 	.word	0x10000cb1
+10000060:	10000cb1 	.word	0x10000cb1
+10000064:	10000cb1 	.word	0x10000cb1
+10000068:	10000cb1 	.word	0x10000cb1
+1000006c:	10000cb1 	.word	0x10000cb1
+10000070:	10000cb1 	.word	0x10000cb1
+10000074:	10000cb1 	.word	0x10000cb1
+10000078:	10000cb1 	.word	0x10000cb1
+1000007c:	10000cb1 	.word	0x10000cb1
 
 10000080 <__do_global_dtors_aux>:
 10000080:	b510      	push	{r4, lr}
@@ -48,7 +48,7 @@ Disassembly of section .text:
 1000009a:	bd10      	pop	{r4, pc}
 1000009c:	0800012c 	.word	0x0800012c
 100000a0:	00000000 	.word	0x00000000
-100000a4:	1000147c 	.word	0x1000147c
+100000a4:	10001520 	.word	0x10001520
 
 100000a8 <frame_dummy>:
 100000a8:	4b04      	ldr	r3, [pc, #16]	; (100000bc <frame_dummy+0x14>)
@@ -63,7 +63,7 @@ Disassembly of section .text:
 100000ba:	46c0      	nop			; (mov r8, r8)
 100000bc:	00000000 	.word	0x00000000
 100000c0:	08000130 	.word	0x08000130
-100000c4:	1000147c 	.word	0x1000147c
+100000c4:	10001520 	.word	0x10001520
 
 100000c8 <Cy_PDL_Init>:
 * This function must be called prior calling any function in PDL.
@@ -765,7 +765,7 @@ cy_en_ipcsema_status_t Cy_IPC_Sema_InitExt(uint32_t ipcChannel, cy_stc_ipc_sema_
 100003b0:	08da      	lsrs	r2, r3, #3
 100003b2:	2100      	movs	r1, #0
 100003b4:	6860      	ldr	r0, [r4, #4]
-100003b6:	f000 ffd3 	bl	10001360 <memset>
+100003b6:	f001 f825 	bl	10001404 <memset>
                 (void) Cy_IPC_Drv_LockRelease (cy_semaIpcStruct, CY_IPC_NO_NOTIFICATION);
 100003ba:	2100      	movs	r1, #0
 100003bc:	0028      	movs	r0, r5
@@ -1743,7 +1743,7 @@ uint32_t Cy_SysClk_FllGetFrequency(void)
 100008d0:	2214      	movs	r2, #20
 100008d2:	2100      	movs	r1, #0
 100008d4:	a801      	add	r0, sp, #4
-100008d6:	f000 fd43 	bl	10001360 <memset>
+100008d6:	f000 fd95 	bl	10001404 <memset>
     Cy_SysClk_FllGetConfiguration(&fllCfg);
 100008da:	a801      	add	r0, sp, #4
 100008dc:	f7ff ff7a 	bl	100007d4 <Cy_SysClk_FllGetConfiguration>
@@ -1786,14 +1786,14 @@ uint32_t Cy_SysClk_FllGetFrequency(void)
 10000918:	0032      	movs	r2, r6
 1000091a:	2300      	movs	r3, #0
 1000091c:	2100      	movs	r1, #0
-1000091e:	f000 fbfb 	bl	10001118 <__aeabi_lmul>
+1000091e:	f000 fc4d 	bl	100011bc <__aeabi_lmul>
 10000922:	0006      	movs	r6, r0
 10000924:	000f      	movs	r7, r1
 10000926:	002a      	movs	r2, r5
 10000928:	2300      	movs	r3, #0
 1000092a:	0020      	movs	r0, r4
 1000092c:	2100      	movs	r1, #0
-1000092e:	f000 fbf3 	bl	10001118 <__aeabi_lmul>
+1000092e:	f000 fc45 	bl	100011bc <__aeabi_lmul>
 10000932:	0002      	movs	r2, r0
 10000934:	000b      	movs	r3, r1
 10000936:	07cc      	lsls	r4, r1, #31
@@ -1802,7 +1802,7 @@ uint32_t Cy_SysClk_FllGetFrequency(void)
 1000093c:	0849      	lsrs	r1, r1, #1
 1000093e:	1980      	adds	r0, r0, r6
 10000940:	4179      	adcs	r1, r7
-10000942:	f000 fbc9 	bl	100010d8 <__aeabi_uldivmod>
+10000942:	f000 fc1b 	bl	1000117c <__aeabi_uldivmod>
 10000946:	e002      	b.n	1000094e <Cy_SysClk_FllGetFrequency+0x82>
     oDiv = (fllCfg.enableOutputDiv) ? 2UL : 1UL;
 10000948:	2501      	movs	r5, #1
@@ -1867,7 +1867,7 @@ uint32_t Cy_SysClk_PllGetFrequency(uint32_t clkPath)
 10000984:	2205      	movs	r2, #5
 10000986:	2100      	movs	r1, #0
 10000988:	a802      	add	r0, sp, #8
-1000098a:	f000 fce9 	bl	10001360 <memset>
+1000098a:	f000 fd3b 	bl	10001404 <memset>
             (void)Cy_SysClk_PllGetConfiguration(clkPath, &pllcfg);
 1000098e:	a902      	add	r1, sp, #8
 10000990:	0020      	movs	r0, r4
@@ -1912,14 +1912,14 @@ uint32_t Cy_SysClk_PllGetFrequency(uint32_t clkPath)
 100009d2:	0032      	movs	r2, r6
 100009d4:	2300      	movs	r3, #0
 100009d6:	2100      	movs	r1, #0
-100009d8:	f000 fb9e 	bl	10001118 <__aeabi_lmul>
+100009d8:	f000 fbf0 	bl	100011bc <__aeabi_lmul>
 100009dc:	9000      	str	r0, [sp, #0]
 100009de:	9101      	str	r1, [sp, #4]
 100009e0:	002a      	movs	r2, r5
 100009e2:	2300      	movs	r3, #0
 100009e4:	0038      	movs	r0, r7
 100009e6:	2100      	movs	r1, #0
-100009e8:	f000 fb96 	bl	10001118 <__aeabi_lmul>
+100009e8:	f000 fbe8 	bl	100011bc <__aeabi_lmul>
 100009ec:	0002      	movs	r2, r0
 100009ee:	000b      	movs	r3, r1
 100009f0:	07cc      	lsls	r4, r1, #31
@@ -1932,7 +1932,7 @@ uint32_t Cy_SysClk_PllGetFrequency(uint32_t clkPath)
 100009fe:	414d      	adcs	r5, r1
 10000a00:	0020      	movs	r0, r4
 10000a02:	0029      	movs	r1, r5
-10000a04:	f000 fb68 	bl	100010d8 <__aeabi_uldivmod>
+10000a04:	f000 fbba 	bl	1000117c <__aeabi_uldivmod>
 10000a08:	e002      	b.n	10000a10 <Cy_SysClk_PllGetFrequency+0xbc>
     uint32_t freq=0UL;    /* PLL Frequency */
 10000a0a:	2000      	movs	r0, #0
@@ -2039,7 +2039,7 @@ void Cy_SysIpcPipeIsrCm0(void)
 10000a96:	f7ff fdb1 	bl	100005fc <Cy_SysClk_ClkPeriGetDivider>
 10000a9a:	1c41      	adds	r1, r0, #1
 10000a9c:	0020      	movs	r0, r4
-10000a9e:	f000 fa8f 	bl	10000fc0 <__udivsi3>
+10000a9e:	f000 fae1 	bl	10001064 <__udivsi3>
 10000aa2:	0004      	movs	r4, r0
 10000aa4:	4b10      	ldr	r3, [pc, #64]	; (10000ae8 <SystemCoreClockUpdate+0x64>)
 10000aa6:	6018      	str	r0, [r3, #0]
@@ -2047,7 +2047,7 @@ void Cy_SysIpcPipeIsrCm0(void)
 10000aa8:	f7ff fd9c 	bl	100005e4 <Cy_SysClk_ClkSlowGetDivider>
 10000aac:	1c41      	adds	r1, r0, #1
 10000aae:	0020      	movs	r0, r4
-10000ab0:	f000 fa86 	bl	10000fc0 <__udivsi3>
+10000ab0:	f000 fad8 	bl	10001064 <__udivsi3>
 10000ab4:	0004      	movs	r4, r0
 10000ab6:	4b0d      	ldr	r3, [pc, #52]	; (10000aec <SystemCoreClockUpdate+0x68>)
 10000ab8:	6018      	str	r0, [r3, #0]
@@ -2055,7 +2055,7 @@ void Cy_SysIpcPipeIsrCm0(void)
 10000aba:	3c01      	subs	r4, #1
 10000abc:	490c      	ldr	r1, [pc, #48]	; (10000af0 <SystemCoreClockUpdate+0x6c>)
 10000abe:	0020      	movs	r0, r4
-10000ac0:	f000 fa7e 	bl	10000fc0 <__udivsi3>
+10000ac0:	f000 fad0 	bl	10001064 <__udivsi3>
 10000ac4:	3001      	adds	r0, #1
 10000ac6:	4b0b      	ldr	r3, [pc, #44]	; (10000af4 <SystemCoreClockUpdate+0x70>)
 10000ac8:	7018      	strb	r0, [r3, #0]
@@ -2063,7 +2063,7 @@ void Cy_SysIpcPipeIsrCm0(void)
 10000aca:	21fa      	movs	r1, #250	; 0xfa
 10000acc:	0089      	lsls	r1, r1, #2
 10000ace:	0020      	movs	r0, r4
-10000ad0:	f000 fa76 	bl	10000fc0 <__udivsi3>
+10000ad0:	f000 fac8 	bl	10001064 <__udivsi3>
 10000ad4:	3001      	adds	r0, #1
 10000ad6:	4b08      	ldr	r3, [pc, #32]	; (10000af8 <SystemCoreClockUpdate+0x74>)
 10000ad8:	6018      	str	r0, [r3, #0]
@@ -2175,7 +2175,7 @@ __STATIC_INLINE void Cy_WDT_Disable(void)
 }
 10000b8c:	bd10      	pop	{r4, pc}
 10000b8e:	46c0      	nop			; (mov r8, r8)
-10000b90:	10001388 	.word	0x10001388
+10000b90:	1000142c 	.word	0x1000142c
 10000b94:	40260000 	.word	0x40260000
 10000b98:	00000584 	.word	0x00000584
 10000b9c:	00020001 	.word	0x00020001
@@ -2183,1499 +2183,1598 @@ __STATIC_INLINE void Cy_WDT_Disable(void)
 10000ba4:	08000148 	.word	0x08000148
 10000ba8:	080000dc 	.word	0x080000dc
 10000bac:	0800015c 	.word	0x0800015c
-10000bb0:	10001448 	.word	0x10001448
+10000bb0:	100014ec 	.word	0x100014ec
 
-10000bb4 <Cy_OnResetUser>:
+10000bb4 <Cy_SysGetCM4Status>:
+    regValue = CPUSS->CM4_PWR_CTL & CPUSS_CM4_PWR_CTL_PWR_MODE_Msk;
+10000bb4:	4a03      	ldr	r2, [pc, #12]	; (10000bc4 <Cy_SysGetCM4Status+0x10>)
+10000bb6:	2390      	movs	r3, #144	; 0x90
+10000bb8:	015b      	lsls	r3, r3, #5
+10000bba:	58d3      	ldr	r3, [r2, r3]
+10000bbc:	2003      	movs	r0, #3
+10000bbe:	4018      	ands	r0, r3
+}
+10000bc0:	4770      	bx	lr
+10000bc2:	46c0      	nop			; (mov r8, r8)
+10000bc4:	40200000 	.word	0x40200000
+
+10000bc8 <Cy_SysResetCM4>:
+{
+10000bc8:	b510      	push	{r4, lr}
+    interruptState = Cy_SysLib_EnterCriticalSection();
+10000bca:	f000 fa2a 	bl	10001022 <Cy_SysLib_EnterCriticalSection>
+    regValue = CPUSS->CM4_PWR_CTL & ~(CPUSS_CM4_PWR_CTL_VECTKEYSTAT_Msk | CPUSS_CM4_PWR_CTL_PWR_MODE_Msk);
+10000bce:	4c08      	ldr	r4, [pc, #32]	; (10000bf0 <Cy_SysResetCM4+0x28>)
+10000bd0:	2190      	movs	r1, #144	; 0x90
+10000bd2:	0149      	lsls	r1, r1, #5
+10000bd4:	5863      	ldr	r3, [r4, r1]
+10000bd6:	4a07      	ldr	r2, [pc, #28]	; (10000bf4 <Cy_SysResetCM4+0x2c>)
+10000bd8:	401a      	ands	r2, r3
+    regValue |= CY_SYS_CM4_STATUS_RESET;
+10000bda:	4b07      	ldr	r3, [pc, #28]	; (10000bf8 <Cy_SysResetCM4+0x30>)
+10000bdc:	4313      	orrs	r3, r2
+    CPUSS->CM4_PWR_CTL = regValue;
+10000bde:	5063      	str	r3, [r4, r1]
+    while((CPUSS->CM4_STATUS & CPUSS_CM4_STATUS_PWR_DONE_Msk) == 0UL)
+10000be0:	4b03      	ldr	r3, [pc, #12]	; (10000bf0 <Cy_SysResetCM4+0x28>)
+10000be2:	685b      	ldr	r3, [r3, #4]
+10000be4:	06db      	lsls	r3, r3, #27
+10000be6:	d5fb      	bpl.n	10000be0 <Cy_SysResetCM4+0x18>
+    Cy_SysLib_ExitCriticalSection(interruptState);
+10000be8:	f000 fa1f 	bl	1000102a <Cy_SysLib_ExitCriticalSection>
+}
+10000bec:	bd10      	pop	{r4, pc}
+10000bee:	46c0      	nop			; (mov r8, r8)
+10000bf0:	40200000 	.word	0x40200000
+10000bf4:	0000fffc 	.word	0x0000fffc
+10000bf8:	05fa0001 	.word	0x05fa0001
+
+10000bfc <Cy_SysEnableCM4>:
+{
+10000bfc:	b570      	push	{r4, r5, r6, lr}
+10000bfe:	0004      	movs	r4, r0
+    CY_ASSERT_L2((vectorTableOffset & CY_SYS_CM4_VECTOR_TABLE_VALID_ADDR) == 0UL);
+10000c00:	0583      	lsls	r3, r0, #22
+10000c02:	d000      	beq.n	10000c06 <Cy_SysEnableCM4+0xa>
+10000c04:	be01      	bkpt	0x0001
+    interruptState = Cy_SysLib_EnterCriticalSection();
+10000c06:	f000 fa0c 	bl	10001022 <Cy_SysLib_EnterCriticalSection>
+10000c0a:	0005      	movs	r5, r0
+    cpuState = Cy_SysGetCM4Status();
+10000c0c:	f7ff ffd2 	bl	10000bb4 <Cy_SysGetCM4Status>
+    if (CY_SYS_CM4_STATUS_ENABLED == cpuState)
+10000c10:	2803      	cmp	r0, #3
+10000c12:	d013      	beq.n	10000c3c <Cy_SysEnableCM4+0x40>
+    CPUSS->CM4_VECTOR_TABLE_BASE = vectorTableOffset;
+10000c14:	4b0b      	ldr	r3, [pc, #44]	; (10000c44 <Cy_SysEnableCM4+0x48>)
+10000c16:	2280      	movs	r2, #128	; 0x80
+10000c18:	0092      	lsls	r2, r2, #2
+10000c1a:	509c      	str	r4, [r3, r2]
+    regValue = CPUSS->CM4_PWR_CTL & ~(CPUSS_CM4_PWR_CTL_VECTKEYSTAT_Msk | CPUSS_CM4_PWR_CTL_PWR_MODE_Msk);
+10000c1c:	2090      	movs	r0, #144	; 0x90
+10000c1e:	0140      	lsls	r0, r0, #5
+10000c20:	581a      	ldr	r2, [r3, r0]
+10000c22:	4909      	ldr	r1, [pc, #36]	; (10000c48 <Cy_SysEnableCM4+0x4c>)
+10000c24:	4011      	ands	r1, r2
+    regValue |= CY_SYS_CM4_STATUS_ENABLED;
+10000c26:	4a09      	ldr	r2, [pc, #36]	; (10000c4c <Cy_SysEnableCM4+0x50>)
+10000c28:	430a      	orrs	r2, r1
+    CPUSS->CM4_PWR_CTL = regValue;
+10000c2a:	501a      	str	r2, [r3, r0]
+    while((CPUSS->CM4_STATUS & CPUSS_CM4_STATUS_PWR_DONE_Msk) == 0UL)
+10000c2c:	4b05      	ldr	r3, [pc, #20]	; (10000c44 <Cy_SysEnableCM4+0x48>)
+10000c2e:	685b      	ldr	r3, [r3, #4]
+10000c30:	06db      	lsls	r3, r3, #27
+10000c32:	d5fb      	bpl.n	10000c2c <Cy_SysEnableCM4+0x30>
+    Cy_SysLib_ExitCriticalSection(interruptState);
+10000c34:	0028      	movs	r0, r5
+10000c36:	f000 f9f8 	bl	1000102a <Cy_SysLib_ExitCriticalSection>
+}
+10000c3a:	bd70      	pop	{r4, r5, r6, pc}
+        Cy_SysResetCM4();
+10000c3c:	f7ff ffc4 	bl	10000bc8 <Cy_SysResetCM4>
+10000c40:	e7e8      	b.n	10000c14 <Cy_SysEnableCM4+0x18>
+10000c42:	46c0      	nop			; (mov r8, r8)
+10000c44:	40200000 	.word	0x40200000
+10000c48:	0000fffc 	.word	0x0000fffc
+10000c4c:	05fa0003 	.word	0x05fa0003
+
+10000c50 <Cy_OnResetUser>:
     .weak   Cy_OnResetUser
     .func   Cy_OnResetUser, Cy_OnResetUser
     .type   Cy_OnResetUser, %function
 
 Cy_OnResetUser:
     bx lr
-10000bb4:	4770      	bx	lr
+10000c50:	4770      	bx	lr
 
-10000bb6 <Reset_Handler>:
+10000c52 <Reset_Handler>:
     /* Reset handler */
     .weak    Reset_Handler
     .type    Reset_Handler, %function
 
 Reset_Handler:
     bl Cy_OnResetUser
-10000bb6:	f7ff fffd 	bl	10000bb4 <Cy_OnResetUser>
+10000c52:	f7ff fffd 	bl	10000c50 <Cy_OnResetUser>
     cpsid i
-10000bba:	b672      	cpsid	i
+10000c56:	b672      	cpsid	i
  *    offset 4: VMA of start of a section to copy to
  *    offset 8: size of the section to copy. Must be multiply of 4
  *
  *  All addresses must be aligned to 4 bytes boundary.
  */
     ldr    r4, =__copy_table_start__
-10000bbc:	4c0f      	ldr	r4, [pc, #60]	; (10000bfc <Reset_Handler+0x46>)
+10000c58:	4c0f      	ldr	r4, [pc, #60]	; (10000c98 <Reset_Handler+0x46>)
     ldr    r5, =__copy_table_end__
-10000bbe:	4d10      	ldr	r5, [pc, #64]	; (10000c00 <Reset_Handler+0x4a>)
+10000c5a:	4d10      	ldr	r5, [pc, #64]	; (10000c9c <Reset_Handler+0x4a>)
 
 .L_loop0:
     cmp    r4, r5
-10000bc0:	42ac      	cmp	r4, r5
+10000c5c:	42ac      	cmp	r4, r5
     bge    .L_loop0_done
-10000bc2:	da09      	bge.n	10000bd8 <Reset_Handler+0x22>
+10000c5e:	da09      	bge.n	10000c74 <Reset_Handler+0x22>
     ldr    r1, [r4]
-10000bc4:	6821      	ldr	r1, [r4, #0]
+10000c60:	6821      	ldr	r1, [r4, #0]
     ldr    r2, [r4, #4]
-10000bc6:	6862      	ldr	r2, [r4, #4]
+10000c62:	6862      	ldr	r2, [r4, #4]
     ldr    r3, [r4, #8]
-10000bc8:	68a3      	ldr	r3, [r4, #8]
+10000c64:	68a3      	ldr	r3, [r4, #8]
 
 .L_loop0_0:
     subs    r3, #4
-10000bca:	3b04      	subs	r3, #4
+10000c66:	3b04      	subs	r3, #4
     blt    .L_loop0_0_done
-10000bcc:	db02      	blt.n	10000bd4 <Reset_Handler+0x1e>
+10000c68:	db02      	blt.n	10000c70 <Reset_Handler+0x1e>
     ldr    r0, [r1, r3]
-10000bce:	58c8      	ldr	r0, [r1, r3]
+10000c6a:	58c8      	ldr	r0, [r1, r3]
     str    r0, [r2, r3]
-10000bd0:	50d0      	str	r0, [r2, r3]
+10000c6c:	50d0      	str	r0, [r2, r3]
     b    .L_loop0_0
-10000bd2:	e7fa      	b.n	10000bca <Reset_Handler+0x14>
+10000c6e:	e7fa      	b.n	10000c66 <Reset_Handler+0x14>
 
 .L_loop0_0_done:
     adds    r4, #12
-10000bd4:	340c      	adds	r4, #12
+10000c70:	340c      	adds	r4, #12
     b    .L_loop0
-10000bd6:	e7f3      	b.n	10000bc0 <Reset_Handler+0xa>
+10000c72:	e7f3      	b.n	10000c5c <Reset_Handler+0xa>
  *    __bss_start__: start of the BSS section.
  *    __bss_end__: end of the BSS section.
  *
  *  Both addresses must be aligned to 4 bytes boundary.
  */
     ldr    r1, =__bss_start__
-10000bd8:	490a      	ldr	r1, [pc, #40]	; (10000c04 <Reset_Handler+0x4e>)
+10000c74:	490a      	ldr	r1, [pc, #40]	; (10000ca0 <Reset_Handler+0x4e>)
     ldr    r2, =__bss_end__
-10000bda:	4a0b      	ldr	r2, [pc, #44]	; (10000c08 <Reset_Handler+0x52>)
+10000c76:	4a0b      	ldr	r2, [pc, #44]	; (10000ca4 <Reset_Handler+0x52>)
 
     movs    r0, 0
-10000bdc:	2000      	movs	r0, #0
+10000c78:	2000      	movs	r0, #0
 
     subs    r2, r1
-10000bde:	1a52      	subs	r2, r2, r1
+10000c7a:	1a52      	subs	r2, r2, r1
     ble    .L_loop3_done
-10000be0:	dd02      	ble.n	10000be8 <Reset_Handler+0x32>
+10000c7c:	dd02      	ble.n	10000c84 <Reset_Handler+0x32>
 
 .L_loop3:
     subs    r2, #4
-10000be2:	3a04      	subs	r2, #4
+10000c7e:	3a04      	subs	r2, #4
     str    r0, [r1, r2]
-10000be4:	5088      	str	r0, [r1, r2]
+10000c80:	5088      	str	r0, [r1, r2]
     bgt    .L_loop3
-10000be6:	dcfc      	bgt.n	10000be2 <Reset_Handler+0x2c>
+10000c82:	dcfc      	bgt.n	10000c7e <Reset_Handler+0x2c>
 .L_loop3_done:
 #endif /* __STARTUP_CLEAR_BSS_MULTIPLE || __STARTUP_CLEAR_BSS */
 
     /* Update Vector Table Offset Register. */
     ldr r0, =__ramVectors
-10000be8:	4808      	ldr	r0, [pc, #32]	; (10000c0c <Reset_Handler+0x56>)
+10000c84:	4808      	ldr	r0, [pc, #32]	; (10000ca8 <Reset_Handler+0x56>)
     ldr r1, =CY_CPU_VTOR_ADDR
-10000bea:	4909      	ldr	r1, [pc, #36]	; (10000c10 <Reset_Handler+0x5a>)
+10000c86:	4909      	ldr	r1, [pc, #36]	; (10000cac <Reset_Handler+0x5a>)
     str r0, [r1]
-10000bec:	6008      	str	r0, [r1, #0]
+10000c88:	6008      	str	r0, [r1, #0]
     dsb 0xF
-10000bee:	f3bf 8f4f 	dsb	sy
+10000c8a:	f3bf 8f4f 	dsb	sy
 
 #ifndef __NO_SYSTEM_INIT
     bl    SystemInit
-10000bf2:	f7ff ff85 	bl	10000b00 <SystemInit>
+10000c8e:	f7ff ff37 	bl	10000b00 <SystemInit>
 #endif
 
     bl    main
-10000bf6:	f000 f9cf 	bl	10000f98 <main>
+10000c92:	f000 f9cd 	bl	10001030 <main>
 
     /* Should never get here */
     b   .
-10000bfa:	e7fe      	b.n	10000bfa <Reset_Handler+0x44>
+10000c96:	e7fe      	b.n	10000c96 <Reset_Handler+0x44>
     ldr    r4, =__copy_table_start__
-10000bfc:	10001488 	.word	0x10001488
+10000c98:	1000152c 	.word	0x1000152c
     ldr    r5, =__copy_table_end__
-10000c00:	100014a0 	.word	0x100014a0
+10000c9c:	10001544 	.word	0x10001544
     ldr    r1, =__bss_start__
-10000c04:	0800012c 	.word	0x0800012c
+10000ca0:	0800012c 	.word	0x0800012c
     ldr    r2, =__bss_end__
-10000c08:	080002dc 	.word	0x080002dc
+10000ca4:	080002dc 	.word	0x080002dc
     ldr r0, =__ramVectors
-10000c0c:	08000000 	.word	0x08000000
+10000ca8:	08000000 	.word	0x08000000
     ldr r1, =CY_CPU_VTOR_ADDR
-10000c10:	e000ed08 	.word	0xe000ed08
+10000cac:	e000ed08 	.word	0xe000ed08
 
-10000c14 <Default_Handler>:
+10000cb0 <Default_Handler>:
     .align    1
     .thumb_func
     .weak    Default_Handler
     .type    Default_Handler, %function
 Default_Handler:
     b    .
-10000c14:	e7fe      	b.n	10000c14 <Default_Handler>
+10000cb0:	e7fe      	b.n	10000cb0 <Default_Handler>
     .size    Default_Handler, . - Default_Handler
     .weak    Cy_SysLib_FaultHandler
     .type    Cy_SysLib_FaultHandler, %function
 
 Cy_SysLib_FaultHandler:
     b    .
-10000c16:	e7fe      	b.n	10000c16 <Default_Handler+0x2>
+10000cb2:	e7fe      	b.n	10000cb2 <Default_Handler+0x2>
 
-10000c18 <HardFault_Handler>:
+10000cb4 <HardFault_Handler>:
     .size    Cy_SysLib_FaultHandler, . - Cy_SysLib_FaultHandler
     .type Fault_Handler, %function
 
 Fault_Handler:
     /* Storing LR content for Creator call stack trace */
     push {LR}
-10000c18:	b500      	push	{lr}
+10000cb4:	b500      	push	{lr}
     movs r0, #4
-10000c1a:	2004      	movs	r0, #4
+10000cb6:	2004      	movs	r0, #4
     mov r1, LR
-10000c1c:	4671      	mov	r1, lr
+10000cb8:	4671      	mov	r1, lr
     tst r0, r1
-10000c1e:	4208      	tst	r0, r1
+10000cba:	4208      	tst	r0, r1
     beq .L_MSP
-10000c20:	d002      	beq.n	10000c28 <HardFault_Handler+0x10>
+10000cbc:	d002      	beq.n	10000cc4 <HardFault_Handler+0x10>
     mrs r0, PSP
-10000c22:	f3ef 8009 	mrs	r0, PSP
+10000cbe:	f3ef 8009 	mrs	r0, PSP
     b .L_API_call
-10000c26:	e002      	b.n	10000c2e <HardFault_Handler+0x16>
+10000cc2:	e002      	b.n	10000cca <HardFault_Handler+0x16>
 .L_MSP:
     mrs r0, MSP
-10000c28:	f3ef 8008 	mrs	r0, MSP
+10000cc4:	f3ef 8008 	mrs	r0, MSP
     /* Compensation of stack pointer address due to pushing 4 bytes of LR */
     adds r0, r0, #4
-10000c2c:	3004      	adds	r0, #4
+10000cc8:	3004      	adds	r0, #4
 .L_API_call:
     bl Cy_SysLib_FaultHandler
-10000c2e:	f000 f989 	bl	10000f44 <Cy_SysLib_FaultHandler>
+10000cca:	f000 f989 	bl	10000fe0 <Cy_SysLib_FaultHandler>
     b   .
-10000c32:	e7fe      	b.n	10000c32 <HardFault_Handler+0x1a>
+10000cce:	e7fe      	b.n	10000cce <HardFault_Handler+0x1a>
 
-10000c34 <Cy_GPIO_SetHSIOM>:
+10000cd0 <Cy_GPIO_SetHSIOM>:
 * \funcusage
 * \snippet gpio/snippet/main.c snippet_Cy_GPIO_SetHSIOM
 *
 *******************************************************************************/
 void Cy_GPIO_SetHSIOM(GPIO_PRT_Type* base, uint32_t pinNum, en_hsiom_sel_t value)
 {
-10000c34:	b510      	push	{r4, lr}
+10000cd0:	b510      	push	{r4, lr}
 
 #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
     cy_en_pra_pin_prot_type_t pinType;
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
-10000c36:	2907      	cmp	r1, #7
-10000c38:	d900      	bls.n	10000c3c <Cy_GPIO_SetHSIOM+0x8>
-10000c3a:	be01      	bkpt	0x0001
+10000cd2:	2907      	cmp	r1, #7
+10000cd4:	d900      	bls.n	10000cd8 <Cy_GPIO_SetHSIOM+0x8>
+10000cd6:	be01      	bkpt	0x0001
     CY_ASSERT_L2(CY_GPIO_IS_HSIOM_VALID(value));
-10000c3c:	231f      	movs	r3, #31
-10000c3e:	0014      	movs	r4, r2
-10000c40:	439c      	bics	r4, r3
-10000c42:	d000      	beq.n	10000c46 <Cy_GPIO_SetHSIOM+0x12>
-10000c44:	be01      	bkpt	0x0001
+10000cd8:	231f      	movs	r3, #31
+10000cda:	0014      	movs	r4, r2
+10000cdc:	439c      	bics	r4, r3
+10000cde:	d000      	beq.n	10000ce2 <Cy_GPIO_SetHSIOM+0x12>
+10000ce0:	be01      	bkpt	0x0001
 
     portNum = ((uint32_t)(base) - CY_GPIO_BASE) / GPIO_PRT_SECTION_SIZE;
-10000c46:	4b10      	ldr	r3, [pc, #64]	; (10000c88 <Cy_GPIO_SetHSIOM+0x54>)
-10000c48:	681b      	ldr	r3, [r3, #0]
-10000c4a:	699c      	ldr	r4, [r3, #24]
-10000c4c:	1b00      	subs	r0, r0, r4
-10000c4e:	09c0      	lsrs	r0, r0, #7
+10000ce2:	4b10      	ldr	r3, [pc, #64]	; (10000d24 <Cy_GPIO_SetHSIOM+0x54>)
+10000ce4:	681b      	ldr	r3, [r3, #0]
+10000ce6:	699c      	ldr	r4, [r3, #24]
+10000ce8:	1b00      	subs	r0, r0, r4
+10000cea:	09c0      	lsrs	r0, r0, #7
     portAddrHSIOM = (HSIOM_PRT_V1_Type*)(CY_HSIOM_BASE + (HSIOM_PRT_SECTION_SIZE * portNum));
-10000c50:	695b      	ldr	r3, [r3, #20]
-10000c52:	0100      	lsls	r0, r0, #4
-10000c54:	1818      	adds	r0, r3, r0
+10000cec:	695b      	ldr	r3, [r3, #20]
+10000cee:	0100      	lsls	r0, r0, #4
+10000cf0:	1818      	adds	r0, r3, r0
 
     #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
         pinType = CY_PRA_GET_PIN_PROT_TYPE(base, pinNum);
     #endif
 
     if(pinNum < CY_GPIO_PRT_HALF)
-10000c56:	2903      	cmp	r1, #3
-10000c58:	d80a      	bhi.n	10000c70 <Cy_GPIO_SetHSIOM+0x3c>
+10000cf2:	2903      	cmp	r1, #3
+10000cf4:	d80a      	bhi.n	10000d0c <Cy_GPIO_SetHSIOM+0x3c>
         {
             /* secure pin */
             tempReg = 0UL;
         }
     #else
         tempReg = HSIOM_PRT_PORT_SEL0(portAddrHSIOM) & ~(CY_GPIO_HSIOM_MASK << (pinNum << CY_GPIO_HSIOM_OFFSET));
-10000c5a:	6804      	ldr	r4, [r0, #0]
-10000c5c:	00c9      	lsls	r1, r1, #3
-10000c5e:	231f      	movs	r3, #31
-10000c60:	408b      	lsls	r3, r1
-10000c62:	439c      	bics	r4, r3
+10000cf6:	6804      	ldr	r4, [r0, #0]
+10000cf8:	00c9      	lsls	r1, r1, #3
+10000cfa:	231f      	movs	r3, #31
+10000cfc:	408b      	lsls	r3, r1
+10000cfe:	439c      	bics	r4, r3
     #endif
         hsiomReg = tempReg | (((uint32_t)value & CY_GPIO_HSIOM_MASK) << (pinNum << CY_GPIO_HSIOM_OFFSET));
-10000c64:	231f      	movs	r3, #31
-10000c66:	401a      	ands	r2, r3
-10000c68:	408a      	lsls	r2, r1
-10000c6a:	4322      	orrs	r2, r4
+10000d00:	231f      	movs	r3, #31
+10000d02:	401a      	ands	r2, r3
+10000d04:	408a      	lsls	r2, r1
+10000d06:	4322      	orrs	r2, r4
         else
         {
             /* Secure PIN can't be modified using register policy */
         }
     #else
         HSIOM_PRT_PORT_SEL0(portAddrHSIOM) = hsiomReg;
-10000c6c:	6002      	str	r2, [r0, #0]
+10000d08:	6002      	str	r2, [r0, #0]
         }
     #else
         HSIOM_PRT_PORT_SEL1(portAddrHSIOM) = hsiomReg;
     #endif
     }
 }
-10000c6e:	bd10      	pop	{r4, pc}
+10000d0a:	bd10      	pop	{r4, pc}
         pinNum -= CY_GPIO_PRT_HALF;
-10000c70:	3904      	subs	r1, #4
+10000d0c:	3904      	subs	r1, #4
         tempReg = HSIOM_PRT_PORT_SEL1(portAddrHSIOM) & ~(CY_GPIO_HSIOM_MASK << (pinNum << CY_GPIO_HSIOM_OFFSET));
-10000c72:	6844      	ldr	r4, [r0, #4]
-10000c74:	00c9      	lsls	r1, r1, #3
-10000c76:	231f      	movs	r3, #31
-10000c78:	408b      	lsls	r3, r1
-10000c7a:	439c      	bics	r4, r3
+10000d0e:	6844      	ldr	r4, [r0, #4]
+10000d10:	00c9      	lsls	r1, r1, #3
+10000d12:	231f      	movs	r3, #31
+10000d14:	408b      	lsls	r3, r1
+10000d16:	439c      	bics	r4, r3
         hsiomReg = tempReg | (((uint32_t)value & CY_GPIO_HSIOM_MASK) << (pinNum << CY_GPIO_HSIOM_OFFSET));
-10000c7c:	231f      	movs	r3, #31
-10000c7e:	401a      	ands	r2, r3
-10000c80:	408a      	lsls	r2, r1
-10000c82:	4322      	orrs	r2, r4
+10000d18:	231f      	movs	r3, #31
+10000d1a:	401a      	ands	r2, r3
+10000d1c:	408a      	lsls	r2, r1
+10000d1e:	4322      	orrs	r2, r4
         HSIOM_PRT_PORT_SEL1(portAddrHSIOM) = hsiomReg;
-10000c84:	6042      	str	r2, [r0, #4]
+10000d20:	6042      	str	r2, [r0, #4]
 }
-10000c86:	e7f2      	b.n	10000c6e <Cy_GPIO_SetHSIOM+0x3a>
-10000c88:	08000148 	.word	0x08000148
+10000d22:	e7f2      	b.n	10000d0a <Cy_GPIO_SetHSIOM+0x3a>
+10000d24:	08000148 	.word	0x08000148
 
-10000c8c <Cy_GPIO_Write>:
+10000d28 <Cy_GPIO_Write>:
 
 #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
     cy_en_pra_pin_prot_type_t pinType;
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
-10000c8c:	2907      	cmp	r1, #7
-10000c8e:	d900      	bls.n	10000c92 <Cy_GPIO_Write+0x6>
-10000c90:	be01      	bkpt	0x0001
+10000d28:	2907      	cmp	r1, #7
+10000d2a:	d900      	bls.n	10000d2e <Cy_GPIO_Write+0x6>
+10000d2c:	be01      	bkpt	0x0001
     CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(value));
-10000c92:	2a01      	cmp	r2, #1
-10000c94:	d900      	bls.n	10000c98 <Cy_GPIO_Write+0xc>
-10000c96:	be01      	bkpt	0x0001
+10000d2e:	2a01      	cmp	r2, #1
+10000d30:	d900      	bls.n	10000d34 <Cy_GPIO_Write+0xc>
+10000d32:	be01      	bkpt	0x0001
 
     outMask = CY_GPIO_OUT_MASK << pinNum;
-10000c98:	2301      	movs	r3, #1
-10000c9a:	408b      	lsls	r3, r1
+10000d34:	2301      	movs	r3, #1
+10000d36:	408b      	lsls	r3, r1
     {
         /* Secure PIN can't be modified using register policy */
     }
 #else
     /* Thread-safe: Directly access the pin registers instead of base->OUT */
     if(0UL == value)
-10000c9c:	2a00      	cmp	r2, #0
-10000c9e:	d101      	bne.n	10000ca4 <Cy_GPIO_Write+0x18>
+10000d38:	2a00      	cmp	r2, #0
+10000d3a:	d101      	bne.n	10000d40 <Cy_GPIO_Write+0x18>
     {
         GPIO_PRT_OUT_CLR(base) = outMask;
-10000ca0:	6043      	str	r3, [r0, #4]
+10000d3c:	6043      	str	r3, [r0, #4]
     else
     {
         GPIO_PRT_OUT_SET(base) = outMask;
     }
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 }
-10000ca2:	4770      	bx	lr
+10000d3e:	4770      	bx	lr
         GPIO_PRT_OUT_SET(base) = outMask;
-10000ca4:	6083      	str	r3, [r0, #8]
+10000d40:	6083      	str	r3, [r0, #8]
 }
-10000ca6:	e7fc      	b.n	10000ca2 <Cy_GPIO_Write+0x16>
+10000d42:	e7fc      	b.n	10000d3e <Cy_GPIO_Write+0x16>
 
-10000ca8 <Cy_GPIO_Inv>:
+10000d44 <Cy_GPIO_Inv>:
 
 #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
     cy_en_pra_pin_prot_type_t pinType;
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
-10000ca8:	2907      	cmp	r1, #7
-10000caa:	d900      	bls.n	10000cae <Cy_GPIO_Inv+0x6>
-10000cac:	be01      	bkpt	0x0001
+10000d44:	2907      	cmp	r1, #7
+10000d46:	d900      	bls.n	10000d4a <Cy_GPIO_Inv+0x6>
+10000d48:	be01      	bkpt	0x0001
 
     outMask = CY_GPIO_OUT_MASK << pinNum;
-10000cae:	2301      	movs	r3, #1
-10000cb0:	408b      	lsls	r3, r1
+10000d4a:	2301      	movs	r3, #1
+10000d4c:	408b      	lsls	r3, r1
     else
     {
         /* Secure PIN can't be modified using register policy */
     }
 #else
     GPIO_PRT_OUT_INV(base) = outMask;
-10000cb2:	60c3      	str	r3, [r0, #12]
+10000d4e:	60c3      	str	r3, [r0, #12]
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 }
-10000cb4:	4770      	bx	lr
+10000d50:	4770      	bx	lr
 	...
 
-10000cb8 <Cy_GPIO_SetDrivemode>:
+10000d54 <Cy_GPIO_SetDrivemode>:
 * \funcusage
 * \snippet gpio/snippet/main.c snippet_Cy_GPIO_SetDrivemode
 *
 *******************************************************************************/
 void Cy_GPIO_SetDrivemode(GPIO_PRT_Type* base, uint32_t pinNum, uint32_t value)
 {
-10000cb8:	b530      	push	{r4, r5, lr}
-10000cba:	0004      	movs	r4, r0
+10000d54:	b530      	push	{r4, r5, lr}
+10000d56:	0004      	movs	r4, r0
     uint32_t prtCfg;
 #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
     cy_en_pra_pin_prot_type_t pinType;
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
-10000cbc:	2907      	cmp	r1, #7
-10000cbe:	d900      	bls.n	10000cc2 <Cy_GPIO_SetDrivemode+0xa>
-10000cc0:	be01      	bkpt	0x0001
+10000d58:	2907      	cmp	r1, #7
+10000d5a:	d900      	bls.n	10000d5e <Cy_GPIO_SetDrivemode+0xa>
+10000d5c:	be01      	bkpt	0x0001
     CY_ASSERT_L2(CY_GPIO_IS_DM_VALID(value));
-10000cc2:	230f      	movs	r3, #15
-10000cc4:	0010      	movs	r0, r2
-10000cc6:	4398      	bics	r0, r3
-10000cc8:	d103      	bne.n	10000cd2 <Cy_GPIO_SetDrivemode+0x1a>
-10000cca:	2a01      	cmp	r2, #1
-10000ccc:	d001      	beq.n	10000cd2 <Cy_GPIO_SetDrivemode+0x1a>
-10000cce:	2a09      	cmp	r2, #9
-10000cd0:	d100      	bne.n	10000cd4 <Cy_GPIO_SetDrivemode+0x1c>
-10000cd2:	be01      	bkpt	0x0001
+10000d5e:	230f      	movs	r3, #15
+10000d60:	0010      	movs	r0, r2
+10000d62:	4398      	bics	r0, r3
+10000d64:	d103      	bne.n	10000d6e <Cy_GPIO_SetDrivemode+0x1a>
+10000d66:	2a01      	cmp	r2, #1
+10000d68:	d001      	beq.n	10000d6e <Cy_GPIO_SetDrivemode+0x1a>
+10000d6a:	2a09      	cmp	r2, #9
+10000d6c:	d100      	bne.n	10000d70 <Cy_GPIO_SetDrivemode+0x1c>
+10000d6e:	be01      	bkpt	0x0001
 
 #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
     pinType = CY_PRA_GET_PIN_PROT_TYPE(base, pinNum);
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     pinLoc = pinNum << CY_GPIO_DRIVE_MODE_OFFSET;
-10000cd4:	0089      	lsls	r1, r1, #2
+10000d70:	0089      	lsls	r1, r1, #2
     {
         /* secure pin */
         tempReg = 0;
     }
 #else
     tempReg = (GPIO_PRT_CFG(base) & ~(CY_GPIO_CFG_DM_MASK << pinLoc));
-10000cd6:	4b07      	ldr	r3, [pc, #28]	; (10000cf4 <Cy_GPIO_SetDrivemode+0x3c>)
-10000cd8:	6818      	ldr	r0, [r3, #0]
-10000cda:	2381      	movs	r3, #129	; 0x81
-10000cdc:	5cc0      	ldrb	r0, [r0, r3]
-10000cde:	1900      	adds	r0, r0, r4
-10000ce0:	6804      	ldr	r4, [r0, #0]
-10000ce2:	3b72      	subs	r3, #114	; 0x72
-10000ce4:	001d      	movs	r5, r3
-10000ce6:	408d      	lsls	r5, r1
-10000ce8:	43ac      	bics	r4, r5
+10000d72:	4b07      	ldr	r3, [pc, #28]	; (10000d90 <Cy_GPIO_SetDrivemode+0x3c>)
+10000d74:	6818      	ldr	r0, [r3, #0]
+10000d76:	2381      	movs	r3, #129	; 0x81
+10000d78:	5cc0      	ldrb	r0, [r0, r3]
+10000d7a:	1900      	adds	r0, r0, r4
+10000d7c:	6804      	ldr	r4, [r0, #0]
+10000d7e:	3b72      	subs	r3, #114	; 0x72
+10000d80:	001d      	movs	r5, r3
+10000d82:	408d      	lsls	r5, r1
+10000d84:	43ac      	bics	r4, r5
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) && defined(CY_DEVICE_PSOC6ABLE2) */
     prtCfg = tempReg | ((value & CY_GPIO_CFG_DM_MASK) << pinLoc);
-10000cea:	4013      	ands	r3, r2
-10000cec:	408b      	lsls	r3, r1
-10000cee:	4323      	orrs	r3, r4
+10000d86:	4013      	ands	r3, r2
+10000d88:	408b      	lsls	r3, r1
+10000d8a:	4323      	orrs	r3, r4
     else
     {
         /* Secure PIN can't be modified using register policy */
     }
 #else
     GPIO_PRT_CFG(base) = prtCfg;
-10000cf0:	6003      	str	r3, [r0, #0]
+10000d8c:	6003      	str	r3, [r0, #0]
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 }
-10000cf2:	bd30      	pop	{r4, r5, pc}
-10000cf4:	08000148 	.word	0x08000148
+10000d8e:	bd30      	pop	{r4, r5, pc}
+10000d90:	08000148 	.word	0x08000148
 
-10000cf8 <Cy_GPIO_SetVtrip>:
+10000d94 <Cy_GPIO_SetVtrip>:
 * \funcusage
 * \snippet gpio/snippet/main.c snippet_Cy_GPIO_SetVtrip
 *
 *******************************************************************************/
 void Cy_GPIO_SetVtrip(GPIO_PRT_Type* base, uint32_t pinNum, uint32_t value)
 {
-10000cf8:	b530      	push	{r4, r5, lr}
-10000cfa:	0003      	movs	r3, r0
+10000d94:	b530      	push	{r4, r5, lr}
+10000d96:	0003      	movs	r3, r0
 
 #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
     cy_en_pra_pin_prot_type_t pinType;
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
-10000cfc:	2907      	cmp	r1, #7
-10000cfe:	d900      	bls.n	10000d02 <Cy_GPIO_SetVtrip+0xa>
-10000d00:	be01      	bkpt	0x0001
+10000d98:	2907      	cmp	r1, #7
+10000d9a:	d900      	bls.n	10000d9e <Cy_GPIO_SetVtrip+0xa>
+10000d9c:	be01      	bkpt	0x0001
     CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(value));
-10000d02:	2a01      	cmp	r2, #1
-10000d04:	d900      	bls.n	10000d08 <Cy_GPIO_SetVtrip+0x10>
-10000d06:	be01      	bkpt	0x0001
+10000d9e:	2a01      	cmp	r2, #1
+10000da0:	d900      	bls.n	10000da4 <Cy_GPIO_SetVtrip+0x10>
+10000da2:	be01      	bkpt	0x0001
     }
 #else
     tempReg = GPIO_PRT_CFG_IN(base) & ~(CY_GPIO_CFG_IN_VTRIP_SEL_0_MASK << pinNum);
 #endif /* defined(CY_DEVICE_PSOC6ABLE2) */
 #else
     tempReg = GPIO_PRT_CFG_IN(base) & ~(CY_GPIO_CFG_IN_VTRIP_SEL_0_MASK << pinNum);
-10000d08:	4807      	ldr	r0, [pc, #28]	; (10000d28 <Cy_GPIO_SetVtrip+0x30>)
-10000d0a:	6804      	ldr	r4, [r0, #0]
-10000d0c:	2082      	movs	r0, #130	; 0x82
-10000d0e:	5c20      	ldrb	r0, [r4, r0]
-10000d10:	18c0      	adds	r0, r0, r3
-10000d12:	6804      	ldr	r4, [r0, #0]
-10000d14:	2301      	movs	r3, #1
-10000d16:	001d      	movs	r5, r3
-10000d18:	408d      	lsls	r5, r1
-10000d1a:	43ac      	bics	r4, r5
+10000da4:	4807      	ldr	r0, [pc, #28]	; (10000dc4 <Cy_GPIO_SetVtrip+0x30>)
+10000da6:	6804      	ldr	r4, [r0, #0]
+10000da8:	2082      	movs	r0, #130	; 0x82
+10000daa:	5c20      	ldrb	r0, [r4, r0]
+10000dac:	18c0      	adds	r0, r0, r3
+10000dae:	6804      	ldr	r4, [r0, #0]
+10000db0:	2301      	movs	r3, #1
+10000db2:	001d      	movs	r5, r3
+10000db4:	408d      	lsls	r5, r1
+10000db6:	43ac      	bics	r4, r5
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     cfgIn = tempReg | ((value & CY_GPIO_CFG_IN_VTRIP_SEL_0_MASK) << pinNum);
-10000d1c:	4013      	ands	r3, r2
-10000d1e:	408b      	lsls	r3, r1
-10000d20:	4323      	orrs	r3, r4
+10000db8:	4013      	ands	r3, r2
+10000dba:	408b      	lsls	r3, r1
+10000dbc:	4323      	orrs	r3, r4
     else
     {
         /* Secure PIN can't be modified using register policy */
     }
 #else
     GPIO_PRT_CFG_IN(base) = cfgIn;
-10000d22:	6003      	str	r3, [r0, #0]
+10000dbe:	6003      	str	r3, [r0, #0]
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 }
-10000d24:	bd30      	pop	{r4, r5, pc}
-10000d26:	46c0      	nop			; (mov r8, r8)
-10000d28:	08000148 	.word	0x08000148
+10000dc0:	bd30      	pop	{r4, r5, pc}
+10000dc2:	46c0      	nop			; (mov r8, r8)
+10000dc4:	08000148 	.word	0x08000148
 
-10000d2c <Cy_GPIO_SetInterruptMask>:
+10000dc8 <Cy_GPIO_SetInterruptMask>:
 * \funcusage
 * \snippet gpio/snippet/main.c snippet_Cy_GPIO_SetInterruptMask
 *
 *******************************************************************************/
 void Cy_GPIO_SetInterruptMask(GPIO_PRT_Type* base, uint32_t pinNum, uint32_t value)
 {
-10000d2c:	b530      	push	{r4, r5, lr}
+10000dc8:	b530      	push	{r4, r5, lr}
 
 #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
     cy_en_pra_pin_prot_type_t pinType;
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     CY_ASSERT_L2(CY_GPIO_IS_FILTER_PIN_VALID(pinNum));
-10000d2e:	2908      	cmp	r1, #8
-10000d30:	d900      	bls.n	10000d34 <Cy_GPIO_SetInterruptMask+0x8>
-10000d32:	be01      	bkpt	0x0001
+10000dca:	2908      	cmp	r1, #8
+10000dcc:	d900      	bls.n	10000dd0 <Cy_GPIO_SetInterruptMask+0x8>
+10000dce:	be01      	bkpt	0x0001
     CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(value));
-10000d34:	2a01      	cmp	r2, #1
-10000d36:	d900      	bls.n	10000d3a <Cy_GPIO_SetInterruptMask+0xe>
-10000d38:	be01      	bkpt	0x0001
+10000dd0:	2a01      	cmp	r2, #1
+10000dd2:	d900      	bls.n	10000dd6 <Cy_GPIO_SetInterruptMask+0xe>
+10000dd4:	be01      	bkpt	0x0001
     }
 #else
     tempReg= GPIO_PRT_INTR_MASK(base) & ~(CY_GPIO_INTR_EN_MASK << pinNum);
 #endif /* defined(CY_DEVICE_PSOC6ABLE2) */
 #else
     tempReg= GPIO_PRT_INTR_MASK(base) & ~(CY_GPIO_INTR_EN_MASK << pinNum);
-10000d3a:	6984      	ldr	r4, [r0, #24]
-10000d3c:	2301      	movs	r3, #1
-10000d3e:	001d      	movs	r5, r3
-10000d40:	408d      	lsls	r5, r1
-10000d42:	43ac      	bics	r4, r5
+10000dd6:	6984      	ldr	r4, [r0, #24]
+10000dd8:	2301      	movs	r3, #1
+10000dda:	001d      	movs	r5, r3
+10000ddc:	408d      	lsls	r5, r1
+10000dde:	43ac      	bics	r4, r5
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     intrMask = tempReg | ((value & CY_GPIO_INTR_EN_MASK) << pinNum);
-10000d44:	4013      	ands	r3, r2
-10000d46:	408b      	lsls	r3, r1
-10000d48:	4323      	orrs	r3, r4
+10000de0:	4013      	ands	r3, r2
+10000de2:	408b      	lsls	r3, r1
+10000de4:	4323      	orrs	r3, r4
     else
     {
         /* Secure PIN can't be modified using register policy */
     }
 #else
     GPIO_PRT_INTR_MASK(base) = intrMask;
-10000d4a:	6183      	str	r3, [r0, #24]
+10000de6:	6183      	str	r3, [r0, #24]
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 }
-10000d4c:	bd30      	pop	{r4, r5, pc}
+10000de8:	bd30      	pop	{r4, r5, pc}
 	...
 
-10000d50 <Cy_GPIO_SetInterruptEdge>:
+10000dec <Cy_GPIO_SetInterruptEdge>:
 * \funcusage
 * \snippet gpio/snippet/main.c snippet_Cy_GPIO_SetInterruptEdge
 *
 *******************************************************************************/
 void Cy_GPIO_SetInterruptEdge(GPIO_PRT_Type* base, uint32_t pinNum, uint32_t value)
 {
-10000d50:	b530      	push	{r4, r5, lr}
-10000d52:	0003      	movs	r3, r0
+10000dec:	b530      	push	{r4, r5, lr}
+10000dee:	0003      	movs	r3, r0
 
 #if (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE)
     cy_en_pra_pin_prot_type_t pinType;
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     CY_ASSERT_L2(CY_GPIO_IS_FILTER_PIN_VALID(pinNum));
-10000d54:	2908      	cmp	r1, #8
-10000d56:	d900      	bls.n	10000d5a <Cy_GPIO_SetInterruptEdge+0xa>
-10000d58:	be01      	bkpt	0x0001
+10000df0:	2908      	cmp	r1, #8
+10000df2:	d900      	bls.n	10000df6 <Cy_GPIO_SetInterruptEdge+0xa>
+10000df4:	be01      	bkpt	0x0001
     CY_ASSERT_L2(CY_GPIO_IS_INT_EDGE_VALID(value));
-10000d5a:	2a03      	cmp	r2, #3
-10000d5c:	d900      	bls.n	10000d60 <Cy_GPIO_SetInterruptEdge+0x10>
-10000d5e:	be01      	bkpt	0x0001
+10000df6:	2a03      	cmp	r2, #3
+10000df8:	d900      	bls.n	10000dfc <Cy_GPIO_SetInterruptEdge+0x10>
+10000dfa:	be01      	bkpt	0x0001
 
     pinLoc = pinNum << CY_GPIO_INTR_CFG_OFFSET;
-10000d60:	0049      	lsls	r1, r1, #1
+10000dfc:	0049      	lsls	r1, r1, #1
     }
 #else
     tempReg = GPIO_PRT_INTR_CFG(base) & ~(CY_GPIO_INTR_EDGE_MASK << pinLoc);
 #endif /* defined(CY_DEVICE_PSOC6ABLE2) */
 #else
     tempReg = GPIO_PRT_INTR_CFG(base) & ~(CY_GPIO_INTR_EDGE_MASK << pinLoc);
-10000d62:	4807      	ldr	r0, [pc, #28]	; (10000d80 <Cy_GPIO_SetInterruptEdge+0x30>)
-10000d64:	6804      	ldr	r4, [r0, #0]
-10000d66:	2080      	movs	r0, #128	; 0x80
-10000d68:	5c20      	ldrb	r0, [r4, r0]
-10000d6a:	18c0      	adds	r0, r0, r3
-10000d6c:	6804      	ldr	r4, [r0, #0]
-10000d6e:	2303      	movs	r3, #3
-10000d70:	001d      	movs	r5, r3
-10000d72:	408d      	lsls	r5, r1
-10000d74:	43ac      	bics	r4, r5
+10000dfe:	4807      	ldr	r0, [pc, #28]	; (10000e1c <Cy_GPIO_SetInterruptEdge+0x30>)
+10000e00:	6804      	ldr	r4, [r0, #0]
+10000e02:	2080      	movs	r0, #128	; 0x80
+10000e04:	5c20      	ldrb	r0, [r4, r0]
+10000e06:	18c0      	adds	r0, r0, r3
+10000e08:	6804      	ldr	r4, [r0, #0]
+10000e0a:	2303      	movs	r3, #3
+10000e0c:	001d      	movs	r5, r3
+10000e0e:	408d      	lsls	r5, r1
+10000e10:	43ac      	bics	r4, r5
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 
     intrCfg = tempReg | ((value & CY_GPIO_INTR_EDGE_MASK) << pinLoc);
-10000d76:	4013      	ands	r3, r2
-10000d78:	408b      	lsls	r3, r1
-10000d7a:	4323      	orrs	r3, r4
+10000e12:	4013      	ands	r3, r2
+10000e14:	408b      	lsls	r3, r1
+10000e16:	4323      	orrs	r3, r4
     else
     {
         /* Secure PIN can't be modified using register policy */
     }
 #else
     GPIO_PRT_INTR_CFG(base) = intrCfg;
-10000d7c:	6003      	str	r3, [r0, #0]
+10000e18:	6003      	str	r3, [r0, #0]
 #endif /* (CY_CPU_CORTEX_M4) && defined(CY_DEVICE_SECURE) */
 }
-10000d7e:	bd30      	pop	{r4, r5, pc}
-10000d80:	08000148 	.word	0x08000148
+10000e1a:	bd30      	pop	{r4, r5, pc}
+10000e1c:	08000148 	.word	0x08000148
 
-10000d84 <Cy_GPIO_Pin_Init>:
+10000e20 <Cy_GPIO_Pin_Init>:
 {
-10000d84:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
-10000d86:	46ce      	mov	lr, r9
-10000d88:	4647      	mov	r7, r8
-10000d8a:	b580      	push	{r7, lr}
-10000d8c:	0007      	movs	r7, r0
-10000d8e:	000e      	movs	r6, r1
-10000d90:	0014      	movs	r4, r2
+10000e20:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+10000e22:	46ce      	mov	lr, r9
+10000e24:	4647      	mov	r7, r8
+10000e26:	b580      	push	{r7, lr}
+10000e28:	0007      	movs	r7, r0
+10000e2a:	000e      	movs	r6, r1
+10000e2c:	0014      	movs	r4, r2
     if ((NULL != base) && (NULL != config))
-10000d92:	2800      	cmp	r0, #0
-10000d94:	d100      	bne.n	10000d98 <Cy_GPIO_Pin_Init+0x14>
-10000d96:	e0b1      	b.n	10000efc <Cy_GPIO_Pin_Init+0x178>
-10000d98:	2a00      	cmp	r2, #0
-10000d9a:	d100      	bne.n	10000d9e <Cy_GPIO_Pin_Init+0x1a>
-10000d9c:	e0b0      	b.n	10000f00 <Cy_GPIO_Pin_Init+0x17c>
+10000e2e:	2800      	cmp	r0, #0
+10000e30:	d100      	bne.n	10000e34 <Cy_GPIO_Pin_Init+0x14>
+10000e32:	e0b1      	b.n	10000f98 <Cy_GPIO_Pin_Init+0x178>
+10000e34:	2a00      	cmp	r2, #0
+10000e36:	d100      	bne.n	10000e3a <Cy_GPIO_Pin_Init+0x1a>
+10000e38:	e0b0      	b.n	10000f9c <Cy_GPIO_Pin_Init+0x17c>
         CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
-10000d9e:	2907      	cmp	r1, #7
-10000da0:	d900      	bls.n	10000da4 <Cy_GPIO_Pin_Init+0x20>
-10000da2:	be01      	bkpt	0x0001
+10000e3a:	2907      	cmp	r1, #7
+10000e3c:	d900      	bls.n	10000e40 <Cy_GPIO_Pin_Init+0x20>
+10000e3e:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(config->outVal));
-10000da4:	6823      	ldr	r3, [r4, #0]
-10000da6:	2b01      	cmp	r3, #1
-10000da8:	d900      	bls.n	10000dac <Cy_GPIO_Pin_Init+0x28>
-10000daa:	be01      	bkpt	0x0001
+10000e40:	6823      	ldr	r3, [r4, #0]
+10000e42:	2b01      	cmp	r3, #1
+10000e44:	d900      	bls.n	10000e48 <Cy_GPIO_Pin_Init+0x28>
+10000e46:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_DM_VALID(config->driveMode));
-10000dac:	6863      	ldr	r3, [r4, #4]
-10000dae:	220f      	movs	r2, #15
-10000db0:	0019      	movs	r1, r3
-10000db2:	4391      	bics	r1, r2
-10000db4:	d103      	bne.n	10000dbe <Cy_GPIO_Pin_Init+0x3a>
-10000db6:	2b01      	cmp	r3, #1
-10000db8:	d001      	beq.n	10000dbe <Cy_GPIO_Pin_Init+0x3a>
-10000dba:	2b09      	cmp	r3, #9
-10000dbc:	d100      	bne.n	10000dc0 <Cy_GPIO_Pin_Init+0x3c>
-10000dbe:	be01      	bkpt	0x0001
+10000e48:	6863      	ldr	r3, [r4, #4]
+10000e4a:	220f      	movs	r2, #15
+10000e4c:	0019      	movs	r1, r3
+10000e4e:	4391      	bics	r1, r2
+10000e50:	d103      	bne.n	10000e5a <Cy_GPIO_Pin_Init+0x3a>
+10000e52:	2b01      	cmp	r3, #1
+10000e54:	d001      	beq.n	10000e5a <Cy_GPIO_Pin_Init+0x3a>
+10000e56:	2b09      	cmp	r3, #9
+10000e58:	d100      	bne.n	10000e5c <Cy_GPIO_Pin_Init+0x3c>
+10000e5a:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_HSIOM_VALID(config->hsiom));
-10000dc0:	7a23      	ldrb	r3, [r4, #8]
-10000dc2:	221f      	movs	r2, #31
-10000dc4:	4393      	bics	r3, r2
-10000dc6:	d000      	beq.n	10000dca <Cy_GPIO_Pin_Init+0x46>
-10000dc8:	be01      	bkpt	0x0001
+10000e5c:	7a23      	ldrb	r3, [r4, #8]
+10000e5e:	221f      	movs	r2, #31
+10000e60:	4393      	bics	r3, r2
+10000e62:	d000      	beq.n	10000e66 <Cy_GPIO_Pin_Init+0x46>
+10000e64:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_INT_EDGE_VALID(config->intEdge));
-10000dca:	68e3      	ldr	r3, [r4, #12]
-10000dcc:	2b03      	cmp	r3, #3
-10000dce:	d900      	bls.n	10000dd2 <Cy_GPIO_Pin_Init+0x4e>
-10000dd0:	be01      	bkpt	0x0001
+10000e66:	68e3      	ldr	r3, [r4, #12]
+10000e68:	2b03      	cmp	r3, #3
+10000e6a:	d900      	bls.n	10000e6e <Cy_GPIO_Pin_Init+0x4e>
+10000e6c:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(config->intMask));
-10000dd2:	6923      	ldr	r3, [r4, #16]
-10000dd4:	2b01      	cmp	r3, #1
-10000dd6:	d900      	bls.n	10000dda <Cy_GPIO_Pin_Init+0x56>
-10000dd8:	be01      	bkpt	0x0001
+10000e6e:	6923      	ldr	r3, [r4, #16]
+10000e70:	2b01      	cmp	r3, #1
+10000e72:	d900      	bls.n	10000e76 <Cy_GPIO_Pin_Init+0x56>
+10000e74:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(config->vtrip));
-10000dda:	6963      	ldr	r3, [r4, #20]
-10000ddc:	2b01      	cmp	r3, #1
-10000dde:	d900      	bls.n	10000de2 <Cy_GPIO_Pin_Init+0x5e>
-10000de0:	be01      	bkpt	0x0001
+10000e76:	6963      	ldr	r3, [r4, #20]
+10000e78:	2b01      	cmp	r3, #1
+10000e7a:	d900      	bls.n	10000e7e <Cy_GPIO_Pin_Init+0x5e>
+10000e7c:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(config->vregEn));
-10000de2:	6a23      	ldr	r3, [r4, #32]
-10000de4:	2b01      	cmp	r3, #1
-10000de6:	d900      	bls.n	10000dea <Cy_GPIO_Pin_Init+0x66>
-10000de8:	be01      	bkpt	0x0001
+10000e7e:	6a23      	ldr	r3, [r4, #32]
+10000e80:	2b01      	cmp	r3, #1
+10000e82:	d900      	bls.n	10000e86 <Cy_GPIO_Pin_Init+0x66>
+10000e84:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(config->ibufMode));
-10000dea:	6a63      	ldr	r3, [r4, #36]	; 0x24
-10000dec:	2b01      	cmp	r3, #1
-10000dee:	d900      	bls.n	10000df2 <Cy_GPIO_Pin_Init+0x6e>
-10000df0:	be01      	bkpt	0x0001
+10000e86:	6a63      	ldr	r3, [r4, #36]	; 0x24
+10000e88:	2b01      	cmp	r3, #1
+10000e8a:	d900      	bls.n	10000e8e <Cy_GPIO_Pin_Init+0x6e>
+10000e8c:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(config->vtripSel));
-10000df2:	6aa3      	ldr	r3, [r4, #40]	; 0x28
-10000df4:	2b01      	cmp	r3, #1
-10000df6:	d900      	bls.n	10000dfa <Cy_GPIO_Pin_Init+0x76>
-10000df8:	be01      	bkpt	0x0001
+10000e8e:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+10000e90:	2b01      	cmp	r3, #1
+10000e92:	d900      	bls.n	10000e96 <Cy_GPIO_Pin_Init+0x76>
+10000e94:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VREF_SEL_VALID(config->vrefSel));
-10000dfa:	6ae3      	ldr	r3, [r4, #44]	; 0x2c
-10000dfc:	2b03      	cmp	r3, #3
-10000dfe:	d900      	bls.n	10000e02 <Cy_GPIO_Pin_Init+0x7e>
-10000e00:	be01      	bkpt	0x0001
+10000e96:	6ae3      	ldr	r3, [r4, #44]	; 0x2c
+10000e98:	2b03      	cmp	r3, #3
+10000e9a:	d900      	bls.n	10000e9e <Cy_GPIO_Pin_Init+0x7e>
+10000e9c:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VOH_SEL_VALID(config->vohSel));
-10000e02:	6b23      	ldr	r3, [r4, #48]	; 0x30
-10000e04:	2b07      	cmp	r3, #7
-10000e06:	d900      	bls.n	10000e0a <Cy_GPIO_Pin_Init+0x86>
-10000e08:	be01      	bkpt	0x0001
+10000e9e:	6b23      	ldr	r3, [r4, #48]	; 0x30
+10000ea0:	2b07      	cmp	r3, #7
+10000ea2:	d900      	bls.n	10000ea6 <Cy_GPIO_Pin_Init+0x86>
+10000ea4:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_DRIVE_SEL_VALID(config->driveSel));
-10000e0a:	69e3      	ldr	r3, [r4, #28]
-10000e0c:	2b03      	cmp	r3, #3
-10000e0e:	d900      	bls.n	10000e12 <Cy_GPIO_Pin_Init+0x8e>
-10000e10:	be01      	bkpt	0x0001
+10000ea6:	69e3      	ldr	r3, [r4, #28]
+10000ea8:	2b03      	cmp	r3, #3
+10000eaa:	d900      	bls.n	10000eae <Cy_GPIO_Pin_Init+0x8e>
+10000eac:	be01      	bkpt	0x0001
         CY_ASSERT_L2(CY_GPIO_IS_VALUE_VALID(config->slewRate));
-10000e12:	69a3      	ldr	r3, [r4, #24]
-10000e14:	2b01      	cmp	r3, #1
-10000e16:	d900      	bls.n	10000e1a <Cy_GPIO_Pin_Init+0x96>
-10000e18:	be01      	bkpt	0x0001
+10000eae:	69a3      	ldr	r3, [r4, #24]
+10000eb0:	2b01      	cmp	r3, #1
+10000eb2:	d900      	bls.n	10000eb6 <Cy_GPIO_Pin_Init+0x96>
+10000eb4:	be01      	bkpt	0x0001
         maskCfgOut = (CY_GPIO_CFG_OUT_SLOW_MASK << pinNum)
-10000e1a:	2501      	movs	r5, #1
-10000e1c:	002b      	movs	r3, r5
-10000e1e:	40b3      	lsls	r3, r6
+10000eb6:	2501      	movs	r5, #1
+10000eb8:	002b      	movs	r3, r5
+10000eba:	40b3      	lsls	r3, r6
                      | (CY_GPIO_CFG_OUT_DRIVE_SEL_MASK << ((uint32_t)(pinNum << 1U) + CY_GPIO_CFG_OUT_DRIVE_OFFSET));
-10000e20:	0070      	lsls	r0, r6, #1
-10000e22:	3010      	adds	r0, #16
-10000e24:	2203      	movs	r2, #3
-10000e26:	4691      	mov	r9, r2
-10000e28:	0011      	movs	r1, r2
-10000e2a:	4081      	lsls	r1, r0
+10000ebc:	0070      	lsls	r0, r6, #1
+10000ebe:	3010      	adds	r0, #16
+10000ec0:	2203      	movs	r2, #3
+10000ec2:	4691      	mov	r9, r2
+10000ec4:	0011      	movs	r1, r2
+10000ec6:	4081      	lsls	r1, r0
         maskCfgOut = (CY_GPIO_CFG_OUT_SLOW_MASK << pinNum)
-10000e2c:	430b      	orrs	r3, r1
-10000e2e:	469c      	mov	ip, r3
+10000ec8:	430b      	orrs	r3, r1
+10000eca:	469c      	mov	ip, r3
         tempReg = GPIO_PRT_CFG_OUT(base) & ~(maskCfgOut);
-10000e30:	4b34      	ldr	r3, [pc, #208]	; (10000f04 <Cy_GPIO_Pin_Init+0x180>)
-10000e32:	4698      	mov	r8, r3
-10000e34:	2383      	movs	r3, #131	; 0x83
-10000e36:	4641      	mov	r1, r8
-10000e38:	6809      	ldr	r1, [r1, #0]
-10000e3a:	5cc9      	ldrb	r1, [r1, r3]
-10000e3c:	19c9      	adds	r1, r1, r7
-10000e3e:	680b      	ldr	r3, [r1, #0]
-10000e40:	4662      	mov	r2, ip
-10000e42:	4393      	bics	r3, r2
-10000e44:	469c      	mov	ip, r3
+10000ecc:	4b34      	ldr	r3, [pc, #208]	; (10000fa0 <Cy_GPIO_Pin_Init+0x180>)
+10000ece:	4698      	mov	r8, r3
+10000ed0:	2383      	movs	r3, #131	; 0x83
+10000ed2:	4641      	mov	r1, r8
+10000ed4:	6809      	ldr	r1, [r1, #0]
+10000ed6:	5cc9      	ldrb	r1, [r1, r3]
+10000ed8:	19c9      	adds	r1, r1, r7
+10000eda:	680b      	ldr	r3, [r1, #0]
+10000edc:	4662      	mov	r2, ip
+10000ede:	4393      	bics	r3, r2
+10000ee0:	469c      	mov	ip, r3
         tempReg2 = tempReg | ((config->slewRate & CY_GPIO_CFG_OUT_SLOW_MASK) << pinNum)
-10000e46:	69a3      	ldr	r3, [r4, #24]
-10000e48:	402b      	ands	r3, r5
-10000e4a:	40b3      	lsls	r3, r6
-10000e4c:	4662      	mov	r2, ip
-10000e4e:	4313      	orrs	r3, r2
-10000e50:	469c      	mov	ip, r3
+10000ee2:	69a3      	ldr	r3, [r4, #24]
+10000ee4:	402b      	ands	r3, r5
+10000ee6:	40b3      	lsls	r3, r6
+10000ee8:	4662      	mov	r2, ip
+10000eea:	4313      	orrs	r3, r2
+10000eec:	469c      	mov	ip, r3
                             | ((config->driveSel & CY_GPIO_CFG_OUT_DRIVE_SEL_MASK) << ((uint32_t)(pinNum << 1U) + CY_GPIO_CFG_OUT_DRIVE_OFFSET));
-10000e52:	69e2      	ldr	r2, [r4, #28]
-10000e54:	464b      	mov	r3, r9
-10000e56:	4013      	ands	r3, r2
-10000e58:	001a      	movs	r2, r3
-10000e5a:	4082      	lsls	r2, r0
+10000eee:	69e2      	ldr	r2, [r4, #28]
+10000ef0:	464b      	mov	r3, r9
+10000ef2:	4013      	ands	r3, r2
+10000ef4:	001a      	movs	r2, r3
+10000ef6:	4082      	lsls	r2, r0
         tempReg2 = tempReg | ((config->slewRate & CY_GPIO_CFG_OUT_SLOW_MASK) << pinNum)
-10000e5c:	4663      	mov	r3, ip
-10000e5e:	4313      	orrs	r3, r2
+10000ef8:	4663      	mov	r3, ip
+10000efa:	4313      	orrs	r3, r2
         GPIO_PRT_CFG_OUT(base) = tempReg2;
-10000e60:	600b      	str	r3, [r1, #0]
+10000efc:	600b      	str	r3, [r1, #0]
         Cy_GPIO_SetHSIOM(base, pinNum, config->hsiom);
-10000e62:	7a22      	ldrb	r2, [r4, #8]
-10000e64:	0031      	movs	r1, r6
-10000e66:	0038      	movs	r0, r7
-10000e68:	f7ff fee4 	bl	10000c34 <Cy_GPIO_SetHSIOM>
+10000efe:	7a22      	ldrb	r2, [r4, #8]
+10000f00:	0031      	movs	r1, r6
+10000f02:	0038      	movs	r0, r7
+10000f04:	f7ff fee4 	bl	10000cd0 <Cy_GPIO_SetHSIOM>
         Cy_GPIO_SetDrivemode(base, pinNum, config->driveMode);
-10000e6c:	6862      	ldr	r2, [r4, #4]
-10000e6e:	0031      	movs	r1, r6
-10000e70:	0038      	movs	r0, r7
-10000e72:	f7ff ff21 	bl	10000cb8 <Cy_GPIO_SetDrivemode>
+10000f08:	6862      	ldr	r2, [r4, #4]
+10000f0a:	0031      	movs	r1, r6
+10000f0c:	0038      	movs	r0, r7
+10000f0e:	f7ff ff21 	bl	10000d54 <Cy_GPIO_SetDrivemode>
         Cy_GPIO_SetInterruptEdge(base, pinNum, config->intEdge);
-10000e76:	68e2      	ldr	r2, [r4, #12]
-10000e78:	0031      	movs	r1, r6
-10000e7a:	0038      	movs	r0, r7
-10000e7c:	f7ff ff68 	bl	10000d50 <Cy_GPIO_SetInterruptEdge>
+10000f12:	68e2      	ldr	r2, [r4, #12]
+10000f14:	0031      	movs	r1, r6
+10000f16:	0038      	movs	r0, r7
+10000f18:	f7ff ff68 	bl	10000dec <Cy_GPIO_SetInterruptEdge>
         Cy_GPIO_SetInterruptMask(base, pinNum, config->intMask);
-10000e80:	6922      	ldr	r2, [r4, #16]
-10000e82:	0031      	movs	r1, r6
-10000e84:	0038      	movs	r0, r7
-10000e86:	f7ff ff51 	bl	10000d2c <Cy_GPIO_SetInterruptMask>
+10000f1c:	6922      	ldr	r2, [r4, #16]
+10000f1e:	0031      	movs	r1, r6
+10000f20:	0038      	movs	r0, r7
+10000f22:	f7ff ff51 	bl	10000dc8 <Cy_GPIO_SetInterruptMask>
         Cy_GPIO_SetVtrip(base, pinNum, config->vtrip);
-10000e8a:	6962      	ldr	r2, [r4, #20]
-10000e8c:	0031      	movs	r1, r6
-10000e8e:	0038      	movs	r0, r7
-10000e90:	f7ff ff32 	bl	10000cf8 <Cy_GPIO_SetVtrip>
+10000f26:	6962      	ldr	r2, [r4, #20]
+10000f28:	0031      	movs	r1, r6
+10000f2a:	0038      	movs	r0, r7
+10000f2c:	f7ff ff32 	bl	10000d94 <Cy_GPIO_SetVtrip>
         tempReg = GPIO_PRT_CFG_SIO(base) & ~(CY_GPIO_SIO_PIN_MASK);
-10000e94:	4643      	mov	r3, r8
-10000e96:	681a      	ldr	r2, [r3, #0]
-10000e98:	2384      	movs	r3, #132	; 0x84
-10000e9a:	5cd2      	ldrb	r2, [r2, r3]
-10000e9c:	18ba      	adds	r2, r7, r2
-10000e9e:	6810      	ldr	r0, [r2, #0]
-10000ea0:	337b      	adds	r3, #123	; 0x7b
-10000ea2:	4698      	mov	r8, r3
-10000ea4:	4398      	bics	r0, r3
+10000f30:	4643      	mov	r3, r8
+10000f32:	681a      	ldr	r2, [r3, #0]
+10000f34:	2384      	movs	r3, #132	; 0x84
+10000f36:	5cd2      	ldrb	r2, [r2, r3]
+10000f38:	18ba      	adds	r2, r7, r2
+10000f3a:	6810      	ldr	r0, [r2, #0]
+10000f3c:	337b      	adds	r3, #123	; 0x7b
+10000f3e:	4698      	mov	r8, r3
+10000f40:	4398      	bics	r0, r3
         tempReg2 = tempReg | (((config->vregEn & CY_GPIO_VREG_EN_MASK)
-10000ea6:	6a23      	ldr	r3, [r4, #32]
-10000ea8:	401d      	ands	r5, r3
+10000f42:	6a23      	ldr	r3, [r4, #32]
+10000f44:	401d      	ands	r5, r3
                                          | ((config->ibufMode & CY_GPIO_IBUF_MASK) << CY_GPIO_IBUF_SHIFT)
-10000eaa:	6a63      	ldr	r3, [r4, #36]	; 0x24
-10000eac:	005b      	lsls	r3, r3, #1
-10000eae:	469c      	mov	ip, r3
-10000eb0:	2302      	movs	r3, #2
-10000eb2:	4661      	mov	r1, ip
-10000eb4:	400b      	ands	r3, r1
-10000eb6:	431d      	orrs	r5, r3
+10000f46:	6a63      	ldr	r3, [r4, #36]	; 0x24
+10000f48:	005b      	lsls	r3, r3, #1
+10000f4a:	469c      	mov	ip, r3
+10000f4c:	2302      	movs	r3, #2
+10000f4e:	4661      	mov	r1, ip
+10000f50:	400b      	ands	r3, r1
+10000f52:	431d      	orrs	r5, r3
                                          | ((config->vtripSel & CY_GPIO_VTRIP_SEL_MASK) << CY_GPIO_VTRIP_SEL_SHIFT)
-10000eb8:	6aa3      	ldr	r3, [r4, #40]	; 0x28
-10000eba:	009b      	lsls	r3, r3, #2
-10000ebc:	469c      	mov	ip, r3
-10000ebe:	2304      	movs	r3, #4
-10000ec0:	4661      	mov	r1, ip
-10000ec2:	400b      	ands	r3, r1
-10000ec4:	432b      	orrs	r3, r5
+10000f54:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+10000f56:	009b      	lsls	r3, r3, #2
+10000f58:	469c      	mov	ip, r3
+10000f5a:	2304      	movs	r3, #4
+10000f5c:	4661      	mov	r1, ip
+10000f5e:	400b      	ands	r3, r1
+10000f60:	432b      	orrs	r3, r5
                                          | ((config->vrefSel & CY_GPIO_VREF_SEL_MASK)  << CY_GPIO_VREF_SEL_SHIFT)
-10000ec6:	6ae1      	ldr	r1, [r4, #44]	; 0x2c
-10000ec8:	00c9      	lsls	r1, r1, #3
-10000eca:	2518      	movs	r5, #24
-10000ecc:	400d      	ands	r5, r1
-10000ece:	432b      	orrs	r3, r5
+10000f62:	6ae1      	ldr	r1, [r4, #44]	; 0x2c
+10000f64:	00c9      	lsls	r1, r1, #3
+10000f66:	2518      	movs	r5, #24
+10000f68:	400d      	ands	r5, r1
+10000f6a:	432b      	orrs	r3, r5
                                          | ((config->vohSel & CY_GPIO_VOH_SEL_MASK) << CY_GPIO_VOH_SEL_SHIFT))
-10000ed0:	6b21      	ldr	r1, [r4, #48]	; 0x30
-10000ed2:	014d      	lsls	r5, r1, #5
-10000ed4:	4641      	mov	r1, r8
-10000ed6:	4029      	ands	r1, r5
-10000ed8:	430b      	orrs	r3, r1
+10000f6c:	6b21      	ldr	r1, [r4, #48]	; 0x30
+10000f6e:	014d      	lsls	r5, r1, #5
+10000f70:	4641      	mov	r1, r8
+10000f72:	4029      	ands	r1, r5
+10000f74:	430b      	orrs	r3, r1
                                            << ((pinNum & CY_GPIO_SIO_ODD_PIN_MASK) << CY_GPIO_CFG_SIO_OFFSET));
-10000eda:	00b1      	lsls	r1, r6, #2
-10000edc:	25fe      	movs	r5, #254	; 0xfe
-10000ede:	00ad      	lsls	r5, r5, #2
-10000ee0:	4029      	ands	r1, r5
-10000ee2:	408b      	lsls	r3, r1
+10000f76:	00b1      	lsls	r1, r6, #2
+10000f78:	25fe      	movs	r5, #254	; 0xfe
+10000f7a:	00ad      	lsls	r5, r5, #2
+10000f7c:	4029      	ands	r1, r5
+10000f7e:	408b      	lsls	r3, r1
         tempReg2 = tempReg | (((config->vregEn & CY_GPIO_VREG_EN_MASK)
-10000ee4:	4303      	orrs	r3, r0
+10000f80:	4303      	orrs	r3, r0
         GPIO_PRT_CFG_SIO(base) = tempReg2;
-10000ee6:	6013      	str	r3, [r2, #0]
+10000f82:	6013      	str	r3, [r2, #0]
         Cy_GPIO_Write(base, pinNum, config->outVal);
-10000ee8:	6822      	ldr	r2, [r4, #0]
-10000eea:	0031      	movs	r1, r6
-10000eec:	0038      	movs	r0, r7
-10000eee:	f7ff fecd 	bl	10000c8c <Cy_GPIO_Write>
+10000f84:	6822      	ldr	r2, [r4, #0]
+10000f86:	0031      	movs	r1, r6
+10000f88:	0038      	movs	r0, r7
+10000f8a:	f7ff fecd 	bl	10000d28 <Cy_GPIO_Write>
         status = CY_GPIO_SUCCESS;
-10000ef2:	2000      	movs	r0, #0
+10000f8e:	2000      	movs	r0, #0
 }
-10000ef4:	bcc0      	pop	{r6, r7}
-10000ef6:	46b9      	mov	r9, r7
-10000ef8:	46b0      	mov	r8, r6
-10000efa:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+10000f90:	bcc0      	pop	{r6, r7}
+10000f92:	46b9      	mov	r9, r7
+10000f94:	46b0      	mov	r8, r6
+10000f96:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
     cy_en_gpio_status_t status = CY_GPIO_BAD_PARAM;
-10000efc:	4802      	ldr	r0, [pc, #8]	; (10000f08 <Cy_GPIO_Pin_Init+0x184>)
-10000efe:	e7f9      	b.n	10000ef4 <Cy_GPIO_Pin_Init+0x170>
-10000f00:	4801      	ldr	r0, [pc, #4]	; (10000f08 <Cy_GPIO_Pin_Init+0x184>)
+10000f98:	4802      	ldr	r0, [pc, #8]	; (10000fa4 <Cy_GPIO_Pin_Init+0x184>)
+10000f9a:	e7f9      	b.n	10000f90 <Cy_GPIO_Pin_Init+0x170>
+10000f9c:	4801      	ldr	r0, [pc, #4]	; (10000fa4 <Cy_GPIO_Pin_Init+0x184>)
     return(status);
-10000f02:	e7f7      	b.n	10000ef4 <Cy_GPIO_Pin_Init+0x170>
-10000f04:	08000148 	.word	0x08000148
-10000f08:	005a0001 	.word	0x005a0001
+10000f9e:	e7f7      	b.n	10000f90 <Cy_GPIO_Pin_Init+0x170>
+10000fa0:	08000148 	.word	0x08000148
+10000fa4:	005a0001 	.word	0x005a0001
 
-10000f0c <Cy_SysLib_Delay>:
+10000fa8 <Cy_SysLib_Delay>:
 #ifndef CY_SYSLIB_DELAY_CALIBRATION_FACTOR
 #define CY_SYSLIB_DELAY_CALIBRATION_FACTOR     1U
 #endif
 
 void Cy_SysLib_Delay(uint32_t milliseconds)
 {
-10000f0c:	b510      	push	{r4, lr}
-10000f0e:	0004      	movs	r4, r0
+10000fa8:	b510      	push	{r4, lr}
+10000faa:	0004      	movs	r4, r0
     while(milliseconds > CY_DELAY_MS_OVERFLOW)
-10000f10:	e006      	b.n	10000f20 <Cy_SysLib_Delay+0x14>
+10000fac:	e006      	b.n	10000fbc <Cy_SysLib_Delay+0x14>
     {
         /* This loop prevents an overflow in value passed to Cy_SysLib_DelayCycles() API.
          * At 100 MHz, (milliseconds * cy_delayFreqKhz) product overflows
          * in case if milliseconds parameter is more than 42 seconds.
          */
         Cy_SysLib_DelayCycles(cy_delay32kMs);
-10000f12:	4b08      	ldr	r3, [pc, #32]	; (10000f34 <Cy_SysLib_Delay+0x28>)
-10000f14:	6818      	ldr	r0, [r3, #0]
-10000f16:	f000 f82f 	bl	10000f78 <Cy_SysLib_DelayCycles>
+10000fae:	4b08      	ldr	r3, [pc, #32]	; (10000fd0 <Cy_SysLib_Delay+0x28>)
+10000fb0:	6818      	ldr	r0, [r3, #0]
+10000fb2:	f000 f82d 	bl	10001010 <Cy_SysLib_DelayCycles>
         milliseconds -= CY_DELAY_MS_OVERFLOW;
-10000f1a:	4b07      	ldr	r3, [pc, #28]	; (10000f38 <Cy_SysLib_Delay+0x2c>)
-10000f1c:	469c      	mov	ip, r3
-10000f1e:	4464      	add	r4, ip
+10000fb6:	4b07      	ldr	r3, [pc, #28]	; (10000fd4 <Cy_SysLib_Delay+0x2c>)
+10000fb8:	469c      	mov	ip, r3
+10000fba:	4464      	add	r4, ip
     while(milliseconds > CY_DELAY_MS_OVERFLOW)
-10000f20:	2380      	movs	r3, #128	; 0x80
-10000f22:	021b      	lsls	r3, r3, #8
-10000f24:	429c      	cmp	r4, r3
-10000f26:	d8f4      	bhi.n	10000f12 <Cy_SysLib_Delay+0x6>
+10000fbc:	2380      	movs	r3, #128	; 0x80
+10000fbe:	021b      	lsls	r3, r3, #8
+10000fc0:	429c      	cmp	r4, r3
+10000fc2:	d8f4      	bhi.n	10000fae <Cy_SysLib_Delay+0x6>
     }
 
     Cy_SysLib_DelayCycles(milliseconds * cy_delayFreqKhz * CY_SYSLIB_DELAY_CALIBRATION_FACTOR);
-10000f28:	4b04      	ldr	r3, [pc, #16]	; (10000f3c <Cy_SysLib_Delay+0x30>)
-10000f2a:	6818      	ldr	r0, [r3, #0]
-10000f2c:	4360      	muls	r0, r4
-10000f2e:	f000 f823 	bl	10000f78 <Cy_SysLib_DelayCycles>
+10000fc4:	4b04      	ldr	r3, [pc, #16]	; (10000fd8 <Cy_SysLib_Delay+0x30>)
+10000fc6:	6818      	ldr	r0, [r3, #0]
+10000fc8:	4360      	muls	r0, r4
+10000fca:	f000 f821 	bl	10001010 <Cy_SysLib_DelayCycles>
 }
-10000f32:	bd10      	pop	{r4, pc}
-10000f34:	0800008c 	.word	0x0800008c
-10000f38:	ffff8000 	.word	0xffff8000
-10000f3c:	08000090 	.word	0x08000090
+10000fce:	bd10      	pop	{r4, pc}
+10000fd0:	0800008c 	.word	0x0800008c
+10000fd4:	ffff8000 	.word	0xffff8000
+10000fd8:	08000090 	.word	0x08000090
 
-10000f40 <Cy_SysLib_ProcessingFault>:
+10000fdc <Cy_SysLib_ProcessingFault>:
          * Otherwise, the compiler destroys the call stack,
          * because treats this API as a no return function.
          */
         Cy_SysLib_AsmInfiniteLoop();
     #else
         while(true) {}
-10000f40:	e7fe      	b.n	10000f40 <Cy_SysLib_ProcessingFault>
+10000fdc:	e7fe      	b.n	10000fdc <Cy_SysLib_ProcessingFault>
 	...
 
-10000f44 <Cy_SysLib_FaultHandler>:
+10000fe0 <Cy_SysLib_FaultHandler>:
 {
-10000f44:	b510      	push	{r4, lr}
+10000fe0:	b510      	push	{r4, lr}
     cy_faultFrame.r0  = faultStackAddr[CY_R0_Pos];
-10000f46:	4b0a      	ldr	r3, [pc, #40]	; (10000f70 <Cy_SysLib_FaultHandler+0x2c>)
-10000f48:	6802      	ldr	r2, [r0, #0]
-10000f4a:	61da      	str	r2, [r3, #28]
+10000fe2:	4b0a      	ldr	r3, [pc, #40]	; (1000100c <Cy_SysLib_FaultHandler+0x2c>)
+10000fe4:	6802      	ldr	r2, [r0, #0]
+10000fe6:	61da      	str	r2, [r3, #28]
     cy_faultFrame.r1  = faultStackAddr[CY_R1_Pos];
-10000f4c:	6842      	ldr	r2, [r0, #4]
-10000f4e:	621a      	str	r2, [r3, #32]
+10000fe8:	6842      	ldr	r2, [r0, #4]
+10000fea:	621a      	str	r2, [r3, #32]
     cy_faultFrame.r2  = faultStackAddr[CY_R2_Pos];
-10000f50:	6882      	ldr	r2, [r0, #8]
-10000f52:	625a      	str	r2, [r3, #36]	; 0x24
+10000fec:	6882      	ldr	r2, [r0, #8]
+10000fee:	625a      	str	r2, [r3, #36]	; 0x24
     cy_faultFrame.r3  = faultStackAddr[CY_R3_Pos];
-10000f54:	68c2      	ldr	r2, [r0, #12]
-10000f56:	629a      	str	r2, [r3, #40]	; 0x28
+10000ff0:	68c2      	ldr	r2, [r0, #12]
+10000ff2:	629a      	str	r2, [r3, #40]	; 0x28
     cy_faultFrame.r12 = faultStackAddr[CY_R12_Pos];
-10000f58:	6902      	ldr	r2, [r0, #16]
-10000f5a:	62da      	str	r2, [r3, #44]	; 0x2c
+10000ff4:	6902      	ldr	r2, [r0, #16]
+10000ff6:	62da      	str	r2, [r3, #44]	; 0x2c
     cy_faultFrame.lr  = faultStackAddr[CY_LR_Pos];
-10000f5c:	6942      	ldr	r2, [r0, #20]
-10000f5e:	631a      	str	r2, [r3, #48]	; 0x30
+10000ff8:	6942      	ldr	r2, [r0, #20]
+10000ffa:	631a      	str	r2, [r3, #48]	; 0x30
     cy_faultFrame.pc  = faultStackAddr[CY_PC_Pos];
-10000f60:	6982      	ldr	r2, [r0, #24]
-10000f62:	635a      	str	r2, [r3, #52]	; 0x34
+10000ffc:	6982      	ldr	r2, [r0, #24]
+10000ffe:	635a      	str	r2, [r3, #52]	; 0x34
     cy_faultFrame.psr = faultStackAddr[CY_PSR_Pos];
-10000f64:	69c2      	ldr	r2, [r0, #28]
-10000f66:	639a      	str	r2, [r3, #56]	; 0x38
+10001000:	69c2      	ldr	r2, [r0, #28]
+10001002:	639a      	str	r2, [r3, #56]	; 0x38
     Cy_SysLib_ProcessingFault();
-10000f68:	f7ff ffea 	bl	10000f40 <Cy_SysLib_ProcessingFault>
+10001004:	f7ff ffea 	bl	10000fdc <Cy_SysLib_ProcessingFault>
 }
-10000f6c:	bd10      	pop	{r4, pc}
-10000f6e:	46c0      	nop			; (mov r8, r8)
-10000f70:	080000f0 	.word	0x080000f0
-10000f74:	00000000 	.word	0x00000000
+10001008:	bd10      	pop	{r4, pc}
+1000100a:	46c0      	nop			; (mov r8, r8)
+1000100c:	080000f0 	.word	0x080000f0
 
-10000f78 <Cy_SysLib_DelayCycles>:
+10001010 <Cy_SysLib_DelayCycles>:
 .func Cy_SysLib_DelayCycles, Cy_SysLib_DelayCycles
 .type Cy_SysLib_DelayCycles, %function
 .thumb_func
 Cy_SysLib_DelayCycles:      /* cycles bytes */
 
     ADDS r0, r0, #2         /*    1    2    Round to nearest multiple of 4 */
-10000f78:	3002      	adds	r0, #2
+10001010:	3002      	adds	r0, #2
     LSRS r0, r0, #2         /*    1    2    Divide by 4 and set flags */
-10000f7a:	0880      	lsrs	r0, r0, #2
+10001012:	0880      	lsrs	r0, r0, #2
     BEQ Cy_DelayCycles_done /*    2    2    Skip if 0 */
-10000f7c:	d003      	beq.n	10000f86 <Cy_DelayCycles_done>
+10001014:	d003      	beq.n	1000101e <Cy_DelayCycles_done>
 
-10000f7e <Cy_DelayCycles_loop>:
+10001016 <Cy_DelayCycles_loop>:
 
 Cy_DelayCycles_loop:
     ADDS r0, r0, #1         /*    1    2    Increment counter */
-10000f7e:	3001      	adds	r0, #1
+10001016:	3001      	adds	r0, #1
     SUBS r0, r0, #2         /*    1    2    Decrement counter by 2 */
-10000f80:	3802      	subs	r0, #2
+10001018:	3802      	subs	r0, #2
     BNE Cy_DelayCycles_loop /*   (1)2  2    2 CPU cycles (if branch is taken) */
-10000f82:	d1fc      	bne.n	10000f7e <Cy_DelayCycles_loop>
+1000101a:	d1fc      	bne.n	10001016 <Cy_DelayCycles_loop>
     NOP                     /*    1    2    Loop alignment padding */
-10000f84:	46c0      	nop			; (mov r8, r8)
+1000101c:	46c0      	nop			; (mov r8, r8)
 
-10000f86 <Cy_DelayCycles_done>:
+1000101e <Cy_DelayCycles_done>:
 
 Cy_DelayCycles_done:
     NOP                     /*    1    2    Loop alignment padding */
-10000f86:	46c0      	nop			; (mov r8, r8)
+1000101e:	46c0      	nop			; (mov r8, r8)
     BX lr                   /*    3    2 */
-10000f88:	4770      	bx	lr
+10001020:	4770      	bx	lr
 
-10000f8a <Cy_SysLib_EnterCriticalSection>:
+10001022 <Cy_SysLib_EnterCriticalSection>:
 .func Cy_SysLib_EnterCriticalSection, Cy_SysLib_EnterCriticalSection
 .type Cy_SysLib_EnterCriticalSection, %function
 .thumb_func
 
 Cy_SysLib_EnterCriticalSection:
     MRS r0, PRIMASK         /* Save and return interrupt state */
-10000f8a:	f3ef 8010 	mrs	r0, PRIMASK
+10001022:	f3ef 8010 	mrs	r0, PRIMASK
     cpsid i                 /* Disable interrupts */
-10000f8e:	b672      	cpsid	i
+10001026:	b672      	cpsid	i
     BX lr
-10000f90:	4770      	bx	lr
+10001028:	4770      	bx	lr
 
-10000f92 <Cy_SysLib_ExitCriticalSection>:
+1000102a <Cy_SysLib_ExitCriticalSection>:
 .func Cy_SysLib_ExitCriticalSection, Cy_SysLib_ExitCriticalSection
 .type Cy_SysLib_ExitCriticalSection, %function
 .thumb_func
 
 Cy_SysLib_ExitCriticalSection:
     MSR PRIMASK, r0         /* Restore interrupt state */
-10000f92:	f380 8810 	msr	PRIMASK, r0
+1000102a:	f380 8810 	msr	PRIMASK, r0
     BX lr
-10000f96:	4770      	bx	lr
+1000102e:	4770      	bx	lr
 
-10000f98 <main>:
+10001030 <main>:
         /*.vohSel =*/       0UL                     /* SIO-specific setting - ignored */
     };
     
 
 int main(void)
 {
-10000f98:	b510      	push	{r4, lr}
+10001030:	b510      	push	{r4, lr}
   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
            Can only be executed in Privileged modes.
  */
 __STATIC_FORCEINLINE void __enable_irq(void)
 {
   __ASM volatile ("cpsie i" : : : "memory");
-10000f9a:	b662      	cpsie	i
+10001032:	b662      	cpsie	i
     /* Enable global interrupts */
     __enable_irq();
 
     Cy_GPIO_Pin_Init(P13_7_PORT, P13_7_PIN, &pinConfig);
-10000f9c:	4a06      	ldr	r2, [pc, #24]	; (10000fb8 <main+0x20>)
-10000f9e:	2107      	movs	r1, #7
-10000fa0:	4806      	ldr	r0, [pc, #24]	; (10000fbc <main+0x24>)
-10000fa2:	f7ff feef 	bl	10000d84 <Cy_GPIO_Pin_Init>
+10001034:	4a08      	ldr	r2, [pc, #32]	; (10001058 <main+0x28>)
+10001036:	2107      	movs	r1, #7
+10001038:	4808      	ldr	r0, [pc, #32]	; (1000105c <main+0x2c>)
+1000103a:	f7ff fef1 	bl	10000e20 <Cy_GPIO_Pin_Init>
 
+	/* Enable CM4. CY_CORTEX_M4_APPL_ADDR must be updated if CM4 memory layout is changed. */
+    Cy_SysEnableCM4(CY_CORTEX_M4_APPL_ADDR);
+1000103e:	4808      	ldr	r0, [pc, #32]	; (10001060 <main+0x30>)
+10001040:	f7ff fddc 	bl	10000bfc <Cy_SysEnableCM4>
     
     while (1) {
         Cy_GPIO_Inv(P13_7_PORT, P13_7_PIN);
-10000fa6:	2107      	movs	r1, #7
-10000fa8:	4804      	ldr	r0, [pc, #16]	; (10000fbc <main+0x24>)
-10000faa:	f7ff fe7d 	bl	10000ca8 <Cy_GPIO_Inv>
+10001044:	2107      	movs	r1, #7
+10001046:	4805      	ldr	r0, [pc, #20]	; (1000105c <main+0x2c>)
+10001048:	f7ff fe7c 	bl	10000d44 <Cy_GPIO_Inv>
         Cy_SysLib_Delay(1000);
-10000fae:	20fa      	movs	r0, #250	; 0xfa
-10000fb0:	0080      	lsls	r0, r0, #2
-10000fb2:	f7ff ffab 	bl	10000f0c <Cy_SysLib_Delay>
+1000104c:	20fa      	movs	r0, #250	; 0xfa
+1000104e:	0080      	lsls	r0, r0, #2
+10001050:	f7ff ffaa 	bl	10000fa8 <Cy_SysLib_Delay>
     while (1) {
-10000fb6:	e7f6      	b.n	10000fa6 <main+0xe>
-10000fb8:	08000098 	.word	0x08000098
-10000fbc:	40310680 	.word	0x40310680
+10001054:	e7f6      	b.n	10001044 <main+0x14>
+10001056:	46c0      	nop			; (mov r8, r8)
+10001058:	08000098 	.word	0x08000098
+1000105c:	40310680 	.word	0x40310680
+10001060:	10002000 	.word	0x10002000
 
-10000fc0 <__udivsi3>:
-10000fc0:	2200      	movs	r2, #0
-10000fc2:	0843      	lsrs	r3, r0, #1
-10000fc4:	428b      	cmp	r3, r1
-10000fc6:	d374      	bcc.n	100010b2 <__udivsi3+0xf2>
-10000fc8:	0903      	lsrs	r3, r0, #4
-10000fca:	428b      	cmp	r3, r1
-10000fcc:	d35f      	bcc.n	1000108e <__udivsi3+0xce>
-10000fce:	0a03      	lsrs	r3, r0, #8
-10000fd0:	428b      	cmp	r3, r1
-10000fd2:	d344      	bcc.n	1000105e <__udivsi3+0x9e>
-10000fd4:	0b03      	lsrs	r3, r0, #12
-10000fd6:	428b      	cmp	r3, r1
-10000fd8:	d328      	bcc.n	1000102c <__udivsi3+0x6c>
-10000fda:	0c03      	lsrs	r3, r0, #16
-10000fdc:	428b      	cmp	r3, r1
-10000fde:	d30d      	bcc.n	10000ffc <__udivsi3+0x3c>
-10000fe0:	22ff      	movs	r2, #255	; 0xff
-10000fe2:	0209      	lsls	r1, r1, #8
-10000fe4:	ba12      	rev	r2, r2
-10000fe6:	0c03      	lsrs	r3, r0, #16
-10000fe8:	428b      	cmp	r3, r1
-10000fea:	d302      	bcc.n	10000ff2 <__udivsi3+0x32>
-10000fec:	1212      	asrs	r2, r2, #8
-10000fee:	0209      	lsls	r1, r1, #8
-10000ff0:	d065      	beq.n	100010be <__udivsi3+0xfe>
-10000ff2:	0b03      	lsrs	r3, r0, #12
-10000ff4:	428b      	cmp	r3, r1
-10000ff6:	d319      	bcc.n	1000102c <__udivsi3+0x6c>
-10000ff8:	e000      	b.n	10000ffc <__udivsi3+0x3c>
-10000ffa:	0a09      	lsrs	r1, r1, #8
-10000ffc:	0bc3      	lsrs	r3, r0, #15
-10000ffe:	428b      	cmp	r3, r1
-10001000:	d301      	bcc.n	10001006 <__udivsi3+0x46>
-10001002:	03cb      	lsls	r3, r1, #15
-10001004:	1ac0      	subs	r0, r0, r3
-10001006:	4152      	adcs	r2, r2
-10001008:	0b83      	lsrs	r3, r0, #14
-1000100a:	428b      	cmp	r3, r1
-1000100c:	d301      	bcc.n	10001012 <__udivsi3+0x52>
-1000100e:	038b      	lsls	r3, r1, #14
-10001010:	1ac0      	subs	r0, r0, r3
-10001012:	4152      	adcs	r2, r2
-10001014:	0b43      	lsrs	r3, r0, #13
-10001016:	428b      	cmp	r3, r1
-10001018:	d301      	bcc.n	1000101e <__udivsi3+0x5e>
-1000101a:	034b      	lsls	r3, r1, #13
-1000101c:	1ac0      	subs	r0, r0, r3
-1000101e:	4152      	adcs	r2, r2
-10001020:	0b03      	lsrs	r3, r0, #12
-10001022:	428b      	cmp	r3, r1
-10001024:	d301      	bcc.n	1000102a <__udivsi3+0x6a>
-10001026:	030b      	lsls	r3, r1, #12
-10001028:	1ac0      	subs	r0, r0, r3
-1000102a:	4152      	adcs	r2, r2
-1000102c:	0ac3      	lsrs	r3, r0, #11
-1000102e:	428b      	cmp	r3, r1
-10001030:	d301      	bcc.n	10001036 <__udivsi3+0x76>
-10001032:	02cb      	lsls	r3, r1, #11
-10001034:	1ac0      	subs	r0, r0, r3
-10001036:	4152      	adcs	r2, r2
-10001038:	0a83      	lsrs	r3, r0, #10
-1000103a:	428b      	cmp	r3, r1
-1000103c:	d301      	bcc.n	10001042 <__udivsi3+0x82>
-1000103e:	028b      	lsls	r3, r1, #10
-10001040:	1ac0      	subs	r0, r0, r3
-10001042:	4152      	adcs	r2, r2
-10001044:	0a43      	lsrs	r3, r0, #9
-10001046:	428b      	cmp	r3, r1
-10001048:	d301      	bcc.n	1000104e <__udivsi3+0x8e>
-1000104a:	024b      	lsls	r3, r1, #9
-1000104c:	1ac0      	subs	r0, r0, r3
-1000104e:	4152      	adcs	r2, r2
-10001050:	0a03      	lsrs	r3, r0, #8
-10001052:	428b      	cmp	r3, r1
-10001054:	d301      	bcc.n	1000105a <__udivsi3+0x9a>
-10001056:	020b      	lsls	r3, r1, #8
-10001058:	1ac0      	subs	r0, r0, r3
-1000105a:	4152      	adcs	r2, r2
-1000105c:	d2cd      	bcs.n	10000ffa <__udivsi3+0x3a>
-1000105e:	09c3      	lsrs	r3, r0, #7
-10001060:	428b      	cmp	r3, r1
-10001062:	d301      	bcc.n	10001068 <__udivsi3+0xa8>
-10001064:	01cb      	lsls	r3, r1, #7
-10001066:	1ac0      	subs	r0, r0, r3
-10001068:	4152      	adcs	r2, r2
-1000106a:	0983      	lsrs	r3, r0, #6
-1000106c:	428b      	cmp	r3, r1
-1000106e:	d301      	bcc.n	10001074 <__udivsi3+0xb4>
-10001070:	018b      	lsls	r3, r1, #6
-10001072:	1ac0      	subs	r0, r0, r3
-10001074:	4152      	adcs	r2, r2
-10001076:	0943      	lsrs	r3, r0, #5
-10001078:	428b      	cmp	r3, r1
-1000107a:	d301      	bcc.n	10001080 <__udivsi3+0xc0>
-1000107c:	014b      	lsls	r3, r1, #5
-1000107e:	1ac0      	subs	r0, r0, r3
-10001080:	4152      	adcs	r2, r2
-10001082:	0903      	lsrs	r3, r0, #4
-10001084:	428b      	cmp	r3, r1
-10001086:	d301      	bcc.n	1000108c <__udivsi3+0xcc>
-10001088:	010b      	lsls	r3, r1, #4
-1000108a:	1ac0      	subs	r0, r0, r3
-1000108c:	4152      	adcs	r2, r2
-1000108e:	08c3      	lsrs	r3, r0, #3
-10001090:	428b      	cmp	r3, r1
-10001092:	d301      	bcc.n	10001098 <__udivsi3+0xd8>
-10001094:	00cb      	lsls	r3, r1, #3
-10001096:	1ac0      	subs	r0, r0, r3
-10001098:	4152      	adcs	r2, r2
-1000109a:	0883      	lsrs	r3, r0, #2
-1000109c:	428b      	cmp	r3, r1
-1000109e:	d301      	bcc.n	100010a4 <__udivsi3+0xe4>
-100010a0:	008b      	lsls	r3, r1, #2
-100010a2:	1ac0      	subs	r0, r0, r3
-100010a4:	4152      	adcs	r2, r2
-100010a6:	0843      	lsrs	r3, r0, #1
-100010a8:	428b      	cmp	r3, r1
-100010aa:	d301      	bcc.n	100010b0 <__udivsi3+0xf0>
-100010ac:	004b      	lsls	r3, r1, #1
-100010ae:	1ac0      	subs	r0, r0, r3
-100010b0:	4152      	adcs	r2, r2
-100010b2:	1a41      	subs	r1, r0, r1
-100010b4:	d200      	bcs.n	100010b8 <__udivsi3+0xf8>
-100010b6:	4601      	mov	r1, r0
-100010b8:	4152      	adcs	r2, r2
-100010ba:	4610      	mov	r0, r2
-100010bc:	4770      	bx	lr
-100010be:	e7ff      	b.n	100010c0 <__udivsi3+0x100>
-100010c0:	b501      	push	{r0, lr}
-100010c2:	2000      	movs	r0, #0
-100010c4:	f000 f806 	bl	100010d4 <__aeabi_idiv0>
-100010c8:	bd02      	pop	{r1, pc}
-100010ca:	46c0      	nop			; (mov r8, r8)
+10001064 <__udivsi3>:
+10001064:	2200      	movs	r2, #0
+10001066:	0843      	lsrs	r3, r0, #1
+10001068:	428b      	cmp	r3, r1
+1000106a:	d374      	bcc.n	10001156 <__udivsi3+0xf2>
+1000106c:	0903      	lsrs	r3, r0, #4
+1000106e:	428b      	cmp	r3, r1
+10001070:	d35f      	bcc.n	10001132 <__udivsi3+0xce>
+10001072:	0a03      	lsrs	r3, r0, #8
+10001074:	428b      	cmp	r3, r1
+10001076:	d344      	bcc.n	10001102 <__udivsi3+0x9e>
+10001078:	0b03      	lsrs	r3, r0, #12
+1000107a:	428b      	cmp	r3, r1
+1000107c:	d328      	bcc.n	100010d0 <__udivsi3+0x6c>
+1000107e:	0c03      	lsrs	r3, r0, #16
+10001080:	428b      	cmp	r3, r1
+10001082:	d30d      	bcc.n	100010a0 <__udivsi3+0x3c>
+10001084:	22ff      	movs	r2, #255	; 0xff
+10001086:	0209      	lsls	r1, r1, #8
+10001088:	ba12      	rev	r2, r2
+1000108a:	0c03      	lsrs	r3, r0, #16
+1000108c:	428b      	cmp	r3, r1
+1000108e:	d302      	bcc.n	10001096 <__udivsi3+0x32>
+10001090:	1212      	asrs	r2, r2, #8
+10001092:	0209      	lsls	r1, r1, #8
+10001094:	d065      	beq.n	10001162 <__udivsi3+0xfe>
+10001096:	0b03      	lsrs	r3, r0, #12
+10001098:	428b      	cmp	r3, r1
+1000109a:	d319      	bcc.n	100010d0 <__udivsi3+0x6c>
+1000109c:	e000      	b.n	100010a0 <__udivsi3+0x3c>
+1000109e:	0a09      	lsrs	r1, r1, #8
+100010a0:	0bc3      	lsrs	r3, r0, #15
+100010a2:	428b      	cmp	r3, r1
+100010a4:	d301      	bcc.n	100010aa <__udivsi3+0x46>
+100010a6:	03cb      	lsls	r3, r1, #15
+100010a8:	1ac0      	subs	r0, r0, r3
+100010aa:	4152      	adcs	r2, r2
+100010ac:	0b83      	lsrs	r3, r0, #14
+100010ae:	428b      	cmp	r3, r1
+100010b0:	d301      	bcc.n	100010b6 <__udivsi3+0x52>
+100010b2:	038b      	lsls	r3, r1, #14
+100010b4:	1ac0      	subs	r0, r0, r3
+100010b6:	4152      	adcs	r2, r2
+100010b8:	0b43      	lsrs	r3, r0, #13
+100010ba:	428b      	cmp	r3, r1
+100010bc:	d301      	bcc.n	100010c2 <__udivsi3+0x5e>
+100010be:	034b      	lsls	r3, r1, #13
+100010c0:	1ac0      	subs	r0, r0, r3
+100010c2:	4152      	adcs	r2, r2
+100010c4:	0b03      	lsrs	r3, r0, #12
+100010c6:	428b      	cmp	r3, r1
+100010c8:	d301      	bcc.n	100010ce <__udivsi3+0x6a>
+100010ca:	030b      	lsls	r3, r1, #12
+100010cc:	1ac0      	subs	r0, r0, r3
+100010ce:	4152      	adcs	r2, r2
+100010d0:	0ac3      	lsrs	r3, r0, #11
+100010d2:	428b      	cmp	r3, r1
+100010d4:	d301      	bcc.n	100010da <__udivsi3+0x76>
+100010d6:	02cb      	lsls	r3, r1, #11
+100010d8:	1ac0      	subs	r0, r0, r3
+100010da:	4152      	adcs	r2, r2
+100010dc:	0a83      	lsrs	r3, r0, #10
+100010de:	428b      	cmp	r3, r1
+100010e0:	d301      	bcc.n	100010e6 <__udivsi3+0x82>
+100010e2:	028b      	lsls	r3, r1, #10
+100010e4:	1ac0      	subs	r0, r0, r3
+100010e6:	4152      	adcs	r2, r2
+100010e8:	0a43      	lsrs	r3, r0, #9
+100010ea:	428b      	cmp	r3, r1
+100010ec:	d301      	bcc.n	100010f2 <__udivsi3+0x8e>
+100010ee:	024b      	lsls	r3, r1, #9
+100010f0:	1ac0      	subs	r0, r0, r3
+100010f2:	4152      	adcs	r2, r2
+100010f4:	0a03      	lsrs	r3, r0, #8
+100010f6:	428b      	cmp	r3, r1
+100010f8:	d301      	bcc.n	100010fe <__udivsi3+0x9a>
+100010fa:	020b      	lsls	r3, r1, #8
+100010fc:	1ac0      	subs	r0, r0, r3
+100010fe:	4152      	adcs	r2, r2
+10001100:	d2cd      	bcs.n	1000109e <__udivsi3+0x3a>
+10001102:	09c3      	lsrs	r3, r0, #7
+10001104:	428b      	cmp	r3, r1
+10001106:	d301      	bcc.n	1000110c <__udivsi3+0xa8>
+10001108:	01cb      	lsls	r3, r1, #7
+1000110a:	1ac0      	subs	r0, r0, r3
+1000110c:	4152      	adcs	r2, r2
+1000110e:	0983      	lsrs	r3, r0, #6
+10001110:	428b      	cmp	r3, r1
+10001112:	d301      	bcc.n	10001118 <__udivsi3+0xb4>
+10001114:	018b      	lsls	r3, r1, #6
+10001116:	1ac0      	subs	r0, r0, r3
+10001118:	4152      	adcs	r2, r2
+1000111a:	0943      	lsrs	r3, r0, #5
+1000111c:	428b      	cmp	r3, r1
+1000111e:	d301      	bcc.n	10001124 <__udivsi3+0xc0>
+10001120:	014b      	lsls	r3, r1, #5
+10001122:	1ac0      	subs	r0, r0, r3
+10001124:	4152      	adcs	r2, r2
+10001126:	0903      	lsrs	r3, r0, #4
+10001128:	428b      	cmp	r3, r1
+1000112a:	d301      	bcc.n	10001130 <__udivsi3+0xcc>
+1000112c:	010b      	lsls	r3, r1, #4
+1000112e:	1ac0      	subs	r0, r0, r3
+10001130:	4152      	adcs	r2, r2
+10001132:	08c3      	lsrs	r3, r0, #3
+10001134:	428b      	cmp	r3, r1
+10001136:	d301      	bcc.n	1000113c <__udivsi3+0xd8>
+10001138:	00cb      	lsls	r3, r1, #3
+1000113a:	1ac0      	subs	r0, r0, r3
+1000113c:	4152      	adcs	r2, r2
+1000113e:	0883      	lsrs	r3, r0, #2
+10001140:	428b      	cmp	r3, r1
+10001142:	d301      	bcc.n	10001148 <__udivsi3+0xe4>
+10001144:	008b      	lsls	r3, r1, #2
+10001146:	1ac0      	subs	r0, r0, r3
+10001148:	4152      	adcs	r2, r2
+1000114a:	0843      	lsrs	r3, r0, #1
+1000114c:	428b      	cmp	r3, r1
+1000114e:	d301      	bcc.n	10001154 <__udivsi3+0xf0>
+10001150:	004b      	lsls	r3, r1, #1
+10001152:	1ac0      	subs	r0, r0, r3
+10001154:	4152      	adcs	r2, r2
+10001156:	1a41      	subs	r1, r0, r1
+10001158:	d200      	bcs.n	1000115c <__udivsi3+0xf8>
+1000115a:	4601      	mov	r1, r0
+1000115c:	4152      	adcs	r2, r2
+1000115e:	4610      	mov	r0, r2
+10001160:	4770      	bx	lr
+10001162:	e7ff      	b.n	10001164 <__udivsi3+0x100>
+10001164:	b501      	push	{r0, lr}
+10001166:	2000      	movs	r0, #0
+10001168:	f000 f806 	bl	10001178 <__aeabi_idiv0>
+1000116c:	bd02      	pop	{r1, pc}
+1000116e:	46c0      	nop			; (mov r8, r8)
 
-100010cc <__aeabi_uidivmod>:
-100010cc:	2900      	cmp	r1, #0
-100010ce:	d0f7      	beq.n	100010c0 <__udivsi3+0x100>
-100010d0:	e776      	b.n	10000fc0 <__udivsi3>
-100010d2:	4770      	bx	lr
+10001170 <__aeabi_uidivmod>:
+10001170:	2900      	cmp	r1, #0
+10001172:	d0f7      	beq.n	10001164 <__udivsi3+0x100>
+10001174:	e776      	b.n	10001064 <__udivsi3>
+10001176:	4770      	bx	lr
 
-100010d4 <__aeabi_idiv0>:
-100010d4:	4770      	bx	lr
-100010d6:	46c0      	nop			; (mov r8, r8)
+10001178 <__aeabi_idiv0>:
+10001178:	4770      	bx	lr
+1000117a:	46c0      	nop			; (mov r8, r8)
 
-100010d8 <__aeabi_uldivmod>:
-100010d8:	2b00      	cmp	r3, #0
-100010da:	d111      	bne.n	10001100 <__aeabi_uldivmod+0x28>
-100010dc:	2a00      	cmp	r2, #0
-100010de:	d10f      	bne.n	10001100 <__aeabi_uldivmod+0x28>
-100010e0:	2900      	cmp	r1, #0
-100010e2:	d100      	bne.n	100010e6 <__aeabi_uldivmod+0xe>
-100010e4:	2800      	cmp	r0, #0
-100010e6:	d002      	beq.n	100010ee <__aeabi_uldivmod+0x16>
-100010e8:	2100      	movs	r1, #0
-100010ea:	43c9      	mvns	r1, r1
-100010ec:	0008      	movs	r0, r1
-100010ee:	b407      	push	{r0, r1, r2}
-100010f0:	4802      	ldr	r0, [pc, #8]	; (100010fc <__aeabi_uldivmod+0x24>)
-100010f2:	a102      	add	r1, pc, #8	; (adr r1, 100010fc <__aeabi_uldivmod+0x24>)
-100010f4:	1840      	adds	r0, r0, r1
-100010f6:	9002      	str	r0, [sp, #8]
-100010f8:	bd03      	pop	{r0, r1, pc}
-100010fa:	46c0      	nop			; (mov r8, r8)
-100010fc:	ffffffd9 	.word	0xffffffd9
-10001100:	b403      	push	{r0, r1}
-10001102:	4668      	mov	r0, sp
-10001104:	b501      	push	{r0, lr}
-10001106:	9802      	ldr	r0, [sp, #8]
-10001108:	f000 f834 	bl	10001174 <__udivmoddi4>
-1000110c:	9b01      	ldr	r3, [sp, #4]
-1000110e:	469e      	mov	lr, r3
-10001110:	b002      	add	sp, #8
-10001112:	bc0c      	pop	{r2, r3}
-10001114:	4770      	bx	lr
-10001116:	46c0      	nop			; (mov r8, r8)
+1000117c <__aeabi_uldivmod>:
+1000117c:	2b00      	cmp	r3, #0
+1000117e:	d111      	bne.n	100011a4 <__aeabi_uldivmod+0x28>
+10001180:	2a00      	cmp	r2, #0
+10001182:	d10f      	bne.n	100011a4 <__aeabi_uldivmod+0x28>
+10001184:	2900      	cmp	r1, #0
+10001186:	d100      	bne.n	1000118a <__aeabi_uldivmod+0xe>
+10001188:	2800      	cmp	r0, #0
+1000118a:	d002      	beq.n	10001192 <__aeabi_uldivmod+0x16>
+1000118c:	2100      	movs	r1, #0
+1000118e:	43c9      	mvns	r1, r1
+10001190:	0008      	movs	r0, r1
+10001192:	b407      	push	{r0, r1, r2}
+10001194:	4802      	ldr	r0, [pc, #8]	; (100011a0 <__aeabi_uldivmod+0x24>)
+10001196:	a102      	add	r1, pc, #8	; (adr r1, 100011a0 <__aeabi_uldivmod+0x24>)
+10001198:	1840      	adds	r0, r0, r1
+1000119a:	9002      	str	r0, [sp, #8]
+1000119c:	bd03      	pop	{r0, r1, pc}
+1000119e:	46c0      	nop			; (mov r8, r8)
+100011a0:	ffffffd9 	.word	0xffffffd9
+100011a4:	b403      	push	{r0, r1}
+100011a6:	4668      	mov	r0, sp
+100011a8:	b501      	push	{r0, lr}
+100011aa:	9802      	ldr	r0, [sp, #8]
+100011ac:	f000 f834 	bl	10001218 <__udivmoddi4>
+100011b0:	9b01      	ldr	r3, [sp, #4]
+100011b2:	469e      	mov	lr, r3
+100011b4:	b002      	add	sp, #8
+100011b6:	bc0c      	pop	{r2, r3}
+100011b8:	4770      	bx	lr
+100011ba:	46c0      	nop			; (mov r8, r8)
 
-10001118 <__aeabi_lmul>:
-10001118:	b5f0      	push	{r4, r5, r6, r7, lr}
-1000111a:	46ce      	mov	lr, r9
-1000111c:	4647      	mov	r7, r8
-1000111e:	b580      	push	{r7, lr}
-10001120:	0007      	movs	r7, r0
-10001122:	4699      	mov	r9, r3
-10001124:	0c3b      	lsrs	r3, r7, #16
-10001126:	469c      	mov	ip, r3
-10001128:	0413      	lsls	r3, r2, #16
-1000112a:	0c1b      	lsrs	r3, r3, #16
-1000112c:	001d      	movs	r5, r3
-1000112e:	000e      	movs	r6, r1
-10001130:	4661      	mov	r1, ip
-10001132:	0400      	lsls	r0, r0, #16
-10001134:	0c14      	lsrs	r4, r2, #16
-10001136:	0c00      	lsrs	r0, r0, #16
-10001138:	4345      	muls	r5, r0
-1000113a:	434b      	muls	r3, r1
-1000113c:	4360      	muls	r0, r4
-1000113e:	4361      	muls	r1, r4
-10001140:	18c0      	adds	r0, r0, r3
-10001142:	0c2c      	lsrs	r4, r5, #16
-10001144:	1820      	adds	r0, r4, r0
-10001146:	468c      	mov	ip, r1
-10001148:	4283      	cmp	r3, r0
-1000114a:	d903      	bls.n	10001154 <__aeabi_lmul+0x3c>
-1000114c:	2380      	movs	r3, #128	; 0x80
-1000114e:	025b      	lsls	r3, r3, #9
-10001150:	4698      	mov	r8, r3
-10001152:	44c4      	add	ip, r8
-10001154:	4649      	mov	r1, r9
-10001156:	4379      	muls	r1, r7
-10001158:	4372      	muls	r2, r6
-1000115a:	0c03      	lsrs	r3, r0, #16
-1000115c:	4463      	add	r3, ip
-1000115e:	042d      	lsls	r5, r5, #16
-10001160:	0c2d      	lsrs	r5, r5, #16
-10001162:	18c9      	adds	r1, r1, r3
-10001164:	0400      	lsls	r0, r0, #16
-10001166:	1940      	adds	r0, r0, r5
-10001168:	1889      	adds	r1, r1, r2
-1000116a:	bcc0      	pop	{r6, r7}
-1000116c:	46b9      	mov	r9, r7
-1000116e:	46b0      	mov	r8, r6
-10001170:	bdf0      	pop	{r4, r5, r6, r7, pc}
-10001172:	46c0      	nop			; (mov r8, r8)
+100011bc <__aeabi_lmul>:
+100011bc:	b5f0      	push	{r4, r5, r6, r7, lr}
+100011be:	46ce      	mov	lr, r9
+100011c0:	4647      	mov	r7, r8
+100011c2:	b580      	push	{r7, lr}
+100011c4:	0007      	movs	r7, r0
+100011c6:	4699      	mov	r9, r3
+100011c8:	0c3b      	lsrs	r3, r7, #16
+100011ca:	469c      	mov	ip, r3
+100011cc:	0413      	lsls	r3, r2, #16
+100011ce:	0c1b      	lsrs	r3, r3, #16
+100011d0:	001d      	movs	r5, r3
+100011d2:	000e      	movs	r6, r1
+100011d4:	4661      	mov	r1, ip
+100011d6:	0400      	lsls	r0, r0, #16
+100011d8:	0c14      	lsrs	r4, r2, #16
+100011da:	0c00      	lsrs	r0, r0, #16
+100011dc:	4345      	muls	r5, r0
+100011de:	434b      	muls	r3, r1
+100011e0:	4360      	muls	r0, r4
+100011e2:	4361      	muls	r1, r4
+100011e4:	18c0      	adds	r0, r0, r3
+100011e6:	0c2c      	lsrs	r4, r5, #16
+100011e8:	1820      	adds	r0, r4, r0
+100011ea:	468c      	mov	ip, r1
+100011ec:	4283      	cmp	r3, r0
+100011ee:	d903      	bls.n	100011f8 <__aeabi_lmul+0x3c>
+100011f0:	2380      	movs	r3, #128	; 0x80
+100011f2:	025b      	lsls	r3, r3, #9
+100011f4:	4698      	mov	r8, r3
+100011f6:	44c4      	add	ip, r8
+100011f8:	4649      	mov	r1, r9
+100011fa:	4379      	muls	r1, r7
+100011fc:	4372      	muls	r2, r6
+100011fe:	0c03      	lsrs	r3, r0, #16
+10001200:	4463      	add	r3, ip
+10001202:	042d      	lsls	r5, r5, #16
+10001204:	0c2d      	lsrs	r5, r5, #16
+10001206:	18c9      	adds	r1, r1, r3
+10001208:	0400      	lsls	r0, r0, #16
+1000120a:	1940      	adds	r0, r0, r5
+1000120c:	1889      	adds	r1, r1, r2
+1000120e:	bcc0      	pop	{r6, r7}
+10001210:	46b9      	mov	r9, r7
+10001212:	46b0      	mov	r8, r6
+10001214:	bdf0      	pop	{r4, r5, r6, r7, pc}
+10001216:	46c0      	nop			; (mov r8, r8)
 
-10001174 <__udivmoddi4>:
-10001174:	b5f0      	push	{r4, r5, r6, r7, lr}
-10001176:	4657      	mov	r7, sl
-10001178:	464e      	mov	r6, r9
-1000117a:	4645      	mov	r5, r8
-1000117c:	46de      	mov	lr, fp
-1000117e:	b5e0      	push	{r5, r6, r7, lr}
-10001180:	0004      	movs	r4, r0
-10001182:	000d      	movs	r5, r1
-10001184:	4692      	mov	sl, r2
-10001186:	4699      	mov	r9, r3
-10001188:	b083      	sub	sp, #12
-1000118a:	428b      	cmp	r3, r1
-1000118c:	d830      	bhi.n	100011f0 <__udivmoddi4+0x7c>
-1000118e:	d02d      	beq.n	100011ec <__udivmoddi4+0x78>
-10001190:	4649      	mov	r1, r9
-10001192:	4650      	mov	r0, sl
-10001194:	f000 f8ba 	bl	1000130c <__clzdi2>
-10001198:	0029      	movs	r1, r5
-1000119a:	0006      	movs	r6, r0
-1000119c:	0020      	movs	r0, r4
-1000119e:	f000 f8b5 	bl	1000130c <__clzdi2>
-100011a2:	1a33      	subs	r3, r6, r0
-100011a4:	4698      	mov	r8, r3
-100011a6:	3b20      	subs	r3, #32
-100011a8:	469b      	mov	fp, r3
-100011aa:	d433      	bmi.n	10001214 <__udivmoddi4+0xa0>
-100011ac:	465a      	mov	r2, fp
-100011ae:	4653      	mov	r3, sl
-100011b0:	4093      	lsls	r3, r2
-100011b2:	4642      	mov	r2, r8
-100011b4:	001f      	movs	r7, r3
-100011b6:	4653      	mov	r3, sl
-100011b8:	4093      	lsls	r3, r2
-100011ba:	001e      	movs	r6, r3
-100011bc:	42af      	cmp	r7, r5
-100011be:	d83a      	bhi.n	10001236 <__udivmoddi4+0xc2>
-100011c0:	42af      	cmp	r7, r5
-100011c2:	d100      	bne.n	100011c6 <__udivmoddi4+0x52>
-100011c4:	e078      	b.n	100012b8 <__udivmoddi4+0x144>
-100011c6:	465b      	mov	r3, fp
-100011c8:	1ba4      	subs	r4, r4, r6
-100011ca:	41bd      	sbcs	r5, r7
-100011cc:	2b00      	cmp	r3, #0
-100011ce:	da00      	bge.n	100011d2 <__udivmoddi4+0x5e>
-100011d0:	e075      	b.n	100012be <__udivmoddi4+0x14a>
-100011d2:	2200      	movs	r2, #0
-100011d4:	2300      	movs	r3, #0
-100011d6:	9200      	str	r2, [sp, #0]
-100011d8:	9301      	str	r3, [sp, #4]
-100011da:	2301      	movs	r3, #1
-100011dc:	465a      	mov	r2, fp
-100011de:	4093      	lsls	r3, r2
-100011e0:	9301      	str	r3, [sp, #4]
-100011e2:	2301      	movs	r3, #1
-100011e4:	4642      	mov	r2, r8
-100011e6:	4093      	lsls	r3, r2
-100011e8:	9300      	str	r3, [sp, #0]
-100011ea:	e028      	b.n	1000123e <__udivmoddi4+0xca>
-100011ec:	4282      	cmp	r2, r0
-100011ee:	d9cf      	bls.n	10001190 <__udivmoddi4+0x1c>
-100011f0:	2200      	movs	r2, #0
-100011f2:	2300      	movs	r3, #0
-100011f4:	9200      	str	r2, [sp, #0]
-100011f6:	9301      	str	r3, [sp, #4]
-100011f8:	9b0c      	ldr	r3, [sp, #48]	; 0x30
-100011fa:	2b00      	cmp	r3, #0
-100011fc:	d001      	beq.n	10001202 <__udivmoddi4+0x8e>
-100011fe:	601c      	str	r4, [r3, #0]
-10001200:	605d      	str	r5, [r3, #4]
-10001202:	9800      	ldr	r0, [sp, #0]
-10001204:	9901      	ldr	r1, [sp, #4]
-10001206:	b003      	add	sp, #12
-10001208:	bcf0      	pop	{r4, r5, r6, r7}
-1000120a:	46bb      	mov	fp, r7
-1000120c:	46b2      	mov	sl, r6
-1000120e:	46a9      	mov	r9, r5
-10001210:	46a0      	mov	r8, r4
-10001212:	bdf0      	pop	{r4, r5, r6, r7, pc}
-10001214:	4642      	mov	r2, r8
-10001216:	2320      	movs	r3, #32
-10001218:	1a9b      	subs	r3, r3, r2
-1000121a:	4652      	mov	r2, sl
-1000121c:	40da      	lsrs	r2, r3
-1000121e:	4641      	mov	r1, r8
-10001220:	0013      	movs	r3, r2
-10001222:	464a      	mov	r2, r9
-10001224:	408a      	lsls	r2, r1
-10001226:	0017      	movs	r7, r2
-10001228:	4642      	mov	r2, r8
-1000122a:	431f      	orrs	r7, r3
-1000122c:	4653      	mov	r3, sl
-1000122e:	4093      	lsls	r3, r2
-10001230:	001e      	movs	r6, r3
-10001232:	42af      	cmp	r7, r5
-10001234:	d9c4      	bls.n	100011c0 <__udivmoddi4+0x4c>
-10001236:	2200      	movs	r2, #0
-10001238:	2300      	movs	r3, #0
-1000123a:	9200      	str	r2, [sp, #0]
-1000123c:	9301      	str	r3, [sp, #4]
-1000123e:	4643      	mov	r3, r8
-10001240:	2b00      	cmp	r3, #0
-10001242:	d0d9      	beq.n	100011f8 <__udivmoddi4+0x84>
-10001244:	07fb      	lsls	r3, r7, #31
-10001246:	0872      	lsrs	r2, r6, #1
-10001248:	431a      	orrs	r2, r3
-1000124a:	4646      	mov	r6, r8
-1000124c:	087b      	lsrs	r3, r7, #1
-1000124e:	e00e      	b.n	1000126e <__udivmoddi4+0xfa>
-10001250:	42ab      	cmp	r3, r5
-10001252:	d101      	bne.n	10001258 <__udivmoddi4+0xe4>
-10001254:	42a2      	cmp	r2, r4
-10001256:	d80c      	bhi.n	10001272 <__udivmoddi4+0xfe>
-10001258:	1aa4      	subs	r4, r4, r2
-1000125a:	419d      	sbcs	r5, r3
-1000125c:	2001      	movs	r0, #1
-1000125e:	1924      	adds	r4, r4, r4
-10001260:	416d      	adcs	r5, r5
-10001262:	2100      	movs	r1, #0
-10001264:	3e01      	subs	r6, #1
-10001266:	1824      	adds	r4, r4, r0
-10001268:	414d      	adcs	r5, r1
-1000126a:	2e00      	cmp	r6, #0
-1000126c:	d006      	beq.n	1000127c <__udivmoddi4+0x108>
-1000126e:	42ab      	cmp	r3, r5
-10001270:	d9ee      	bls.n	10001250 <__udivmoddi4+0xdc>
-10001272:	3e01      	subs	r6, #1
-10001274:	1924      	adds	r4, r4, r4
-10001276:	416d      	adcs	r5, r5
-10001278:	2e00      	cmp	r6, #0
-1000127a:	d1f8      	bne.n	1000126e <__udivmoddi4+0xfa>
-1000127c:	9800      	ldr	r0, [sp, #0]
-1000127e:	9901      	ldr	r1, [sp, #4]
-10001280:	465b      	mov	r3, fp
-10001282:	1900      	adds	r0, r0, r4
-10001284:	4169      	adcs	r1, r5
-10001286:	2b00      	cmp	r3, #0
-10001288:	db24      	blt.n	100012d4 <__udivmoddi4+0x160>
-1000128a:	002b      	movs	r3, r5
-1000128c:	465a      	mov	r2, fp
-1000128e:	4644      	mov	r4, r8
-10001290:	40d3      	lsrs	r3, r2
-10001292:	002a      	movs	r2, r5
-10001294:	40e2      	lsrs	r2, r4
-10001296:	001c      	movs	r4, r3
-10001298:	465b      	mov	r3, fp
-1000129a:	0015      	movs	r5, r2
-1000129c:	2b00      	cmp	r3, #0
-1000129e:	db2a      	blt.n	100012f6 <__udivmoddi4+0x182>
-100012a0:	0026      	movs	r6, r4
-100012a2:	409e      	lsls	r6, r3
-100012a4:	0033      	movs	r3, r6
-100012a6:	0026      	movs	r6, r4
-100012a8:	4647      	mov	r7, r8
-100012aa:	40be      	lsls	r6, r7
-100012ac:	0032      	movs	r2, r6
-100012ae:	1a80      	subs	r0, r0, r2
-100012b0:	4199      	sbcs	r1, r3
-100012b2:	9000      	str	r0, [sp, #0]
-100012b4:	9101      	str	r1, [sp, #4]
-100012b6:	e79f      	b.n	100011f8 <__udivmoddi4+0x84>
-100012b8:	42a3      	cmp	r3, r4
-100012ba:	d8bc      	bhi.n	10001236 <__udivmoddi4+0xc2>
-100012bc:	e783      	b.n	100011c6 <__udivmoddi4+0x52>
-100012be:	4642      	mov	r2, r8
-100012c0:	2320      	movs	r3, #32
-100012c2:	2100      	movs	r1, #0
-100012c4:	1a9b      	subs	r3, r3, r2
-100012c6:	2200      	movs	r2, #0
-100012c8:	9100      	str	r1, [sp, #0]
-100012ca:	9201      	str	r2, [sp, #4]
-100012cc:	2201      	movs	r2, #1
-100012ce:	40da      	lsrs	r2, r3
-100012d0:	9201      	str	r2, [sp, #4]
-100012d2:	e786      	b.n	100011e2 <__udivmoddi4+0x6e>
-100012d4:	4642      	mov	r2, r8
-100012d6:	2320      	movs	r3, #32
-100012d8:	1a9b      	subs	r3, r3, r2
-100012da:	002a      	movs	r2, r5
-100012dc:	4646      	mov	r6, r8
-100012de:	409a      	lsls	r2, r3
-100012e0:	0023      	movs	r3, r4
-100012e2:	40f3      	lsrs	r3, r6
-100012e4:	4644      	mov	r4, r8
-100012e6:	4313      	orrs	r3, r2
-100012e8:	002a      	movs	r2, r5
-100012ea:	40e2      	lsrs	r2, r4
-100012ec:	001c      	movs	r4, r3
-100012ee:	465b      	mov	r3, fp
-100012f0:	0015      	movs	r5, r2
-100012f2:	2b00      	cmp	r3, #0
-100012f4:	dad4      	bge.n	100012a0 <__udivmoddi4+0x12c>
-100012f6:	4642      	mov	r2, r8
-100012f8:	002f      	movs	r7, r5
-100012fa:	2320      	movs	r3, #32
-100012fc:	0026      	movs	r6, r4
-100012fe:	4097      	lsls	r7, r2
-10001300:	1a9b      	subs	r3, r3, r2
-10001302:	40de      	lsrs	r6, r3
-10001304:	003b      	movs	r3, r7
-10001306:	4333      	orrs	r3, r6
-10001308:	e7cd      	b.n	100012a6 <__udivmoddi4+0x132>
-1000130a:	46c0      	nop			; (mov r8, r8)
+10001218 <__udivmoddi4>:
+10001218:	b5f0      	push	{r4, r5, r6, r7, lr}
+1000121a:	4657      	mov	r7, sl
+1000121c:	464e      	mov	r6, r9
+1000121e:	4645      	mov	r5, r8
+10001220:	46de      	mov	lr, fp
+10001222:	b5e0      	push	{r5, r6, r7, lr}
+10001224:	0004      	movs	r4, r0
+10001226:	000d      	movs	r5, r1
+10001228:	4692      	mov	sl, r2
+1000122a:	4699      	mov	r9, r3
+1000122c:	b083      	sub	sp, #12
+1000122e:	428b      	cmp	r3, r1
+10001230:	d830      	bhi.n	10001294 <__udivmoddi4+0x7c>
+10001232:	d02d      	beq.n	10001290 <__udivmoddi4+0x78>
+10001234:	4649      	mov	r1, r9
+10001236:	4650      	mov	r0, sl
+10001238:	f000 f8ba 	bl	100013b0 <__clzdi2>
+1000123c:	0029      	movs	r1, r5
+1000123e:	0006      	movs	r6, r0
+10001240:	0020      	movs	r0, r4
+10001242:	f000 f8b5 	bl	100013b0 <__clzdi2>
+10001246:	1a33      	subs	r3, r6, r0
+10001248:	4698      	mov	r8, r3
+1000124a:	3b20      	subs	r3, #32
+1000124c:	469b      	mov	fp, r3
+1000124e:	d433      	bmi.n	100012b8 <__udivmoddi4+0xa0>
+10001250:	465a      	mov	r2, fp
+10001252:	4653      	mov	r3, sl
+10001254:	4093      	lsls	r3, r2
+10001256:	4642      	mov	r2, r8
+10001258:	001f      	movs	r7, r3
+1000125a:	4653      	mov	r3, sl
+1000125c:	4093      	lsls	r3, r2
+1000125e:	001e      	movs	r6, r3
+10001260:	42af      	cmp	r7, r5
+10001262:	d83a      	bhi.n	100012da <__udivmoddi4+0xc2>
+10001264:	42af      	cmp	r7, r5
+10001266:	d100      	bne.n	1000126a <__udivmoddi4+0x52>
+10001268:	e078      	b.n	1000135c <__udivmoddi4+0x144>
+1000126a:	465b      	mov	r3, fp
+1000126c:	1ba4      	subs	r4, r4, r6
+1000126e:	41bd      	sbcs	r5, r7
+10001270:	2b00      	cmp	r3, #0
+10001272:	da00      	bge.n	10001276 <__udivmoddi4+0x5e>
+10001274:	e075      	b.n	10001362 <__udivmoddi4+0x14a>
+10001276:	2200      	movs	r2, #0
+10001278:	2300      	movs	r3, #0
+1000127a:	9200      	str	r2, [sp, #0]
+1000127c:	9301      	str	r3, [sp, #4]
+1000127e:	2301      	movs	r3, #1
+10001280:	465a      	mov	r2, fp
+10001282:	4093      	lsls	r3, r2
+10001284:	9301      	str	r3, [sp, #4]
+10001286:	2301      	movs	r3, #1
+10001288:	4642      	mov	r2, r8
+1000128a:	4093      	lsls	r3, r2
+1000128c:	9300      	str	r3, [sp, #0]
+1000128e:	e028      	b.n	100012e2 <__udivmoddi4+0xca>
+10001290:	4282      	cmp	r2, r0
+10001292:	d9cf      	bls.n	10001234 <__udivmoddi4+0x1c>
+10001294:	2200      	movs	r2, #0
+10001296:	2300      	movs	r3, #0
+10001298:	9200      	str	r2, [sp, #0]
+1000129a:	9301      	str	r3, [sp, #4]
+1000129c:	9b0c      	ldr	r3, [sp, #48]	; 0x30
+1000129e:	2b00      	cmp	r3, #0
+100012a0:	d001      	beq.n	100012a6 <__udivmoddi4+0x8e>
+100012a2:	601c      	str	r4, [r3, #0]
+100012a4:	605d      	str	r5, [r3, #4]
+100012a6:	9800      	ldr	r0, [sp, #0]
+100012a8:	9901      	ldr	r1, [sp, #4]
+100012aa:	b003      	add	sp, #12
+100012ac:	bcf0      	pop	{r4, r5, r6, r7}
+100012ae:	46bb      	mov	fp, r7
+100012b0:	46b2      	mov	sl, r6
+100012b2:	46a9      	mov	r9, r5
+100012b4:	46a0      	mov	r8, r4
+100012b6:	bdf0      	pop	{r4, r5, r6, r7, pc}
+100012b8:	4642      	mov	r2, r8
+100012ba:	2320      	movs	r3, #32
+100012bc:	1a9b      	subs	r3, r3, r2
+100012be:	4652      	mov	r2, sl
+100012c0:	40da      	lsrs	r2, r3
+100012c2:	4641      	mov	r1, r8
+100012c4:	0013      	movs	r3, r2
+100012c6:	464a      	mov	r2, r9
+100012c8:	408a      	lsls	r2, r1
+100012ca:	0017      	movs	r7, r2
+100012cc:	4642      	mov	r2, r8
+100012ce:	431f      	orrs	r7, r3
+100012d0:	4653      	mov	r3, sl
+100012d2:	4093      	lsls	r3, r2
+100012d4:	001e      	movs	r6, r3
+100012d6:	42af      	cmp	r7, r5
+100012d8:	d9c4      	bls.n	10001264 <__udivmoddi4+0x4c>
+100012da:	2200      	movs	r2, #0
+100012dc:	2300      	movs	r3, #0
+100012de:	9200      	str	r2, [sp, #0]
+100012e0:	9301      	str	r3, [sp, #4]
+100012e2:	4643      	mov	r3, r8
+100012e4:	2b00      	cmp	r3, #0
+100012e6:	d0d9      	beq.n	1000129c <__udivmoddi4+0x84>
+100012e8:	07fb      	lsls	r3, r7, #31
+100012ea:	0872      	lsrs	r2, r6, #1
+100012ec:	431a      	orrs	r2, r3
+100012ee:	4646      	mov	r6, r8
+100012f0:	087b      	lsrs	r3, r7, #1
+100012f2:	e00e      	b.n	10001312 <__udivmoddi4+0xfa>
+100012f4:	42ab      	cmp	r3, r5
+100012f6:	d101      	bne.n	100012fc <__udivmoddi4+0xe4>
+100012f8:	42a2      	cmp	r2, r4
+100012fa:	d80c      	bhi.n	10001316 <__udivmoddi4+0xfe>
+100012fc:	1aa4      	subs	r4, r4, r2
+100012fe:	419d      	sbcs	r5, r3
+10001300:	2001      	movs	r0, #1
+10001302:	1924      	adds	r4, r4, r4
+10001304:	416d      	adcs	r5, r5
+10001306:	2100      	movs	r1, #0
+10001308:	3e01      	subs	r6, #1
+1000130a:	1824      	adds	r4, r4, r0
+1000130c:	414d      	adcs	r5, r1
+1000130e:	2e00      	cmp	r6, #0
+10001310:	d006      	beq.n	10001320 <__udivmoddi4+0x108>
+10001312:	42ab      	cmp	r3, r5
+10001314:	d9ee      	bls.n	100012f4 <__udivmoddi4+0xdc>
+10001316:	3e01      	subs	r6, #1
+10001318:	1924      	adds	r4, r4, r4
+1000131a:	416d      	adcs	r5, r5
+1000131c:	2e00      	cmp	r6, #0
+1000131e:	d1f8      	bne.n	10001312 <__udivmoddi4+0xfa>
+10001320:	9800      	ldr	r0, [sp, #0]
+10001322:	9901      	ldr	r1, [sp, #4]
+10001324:	465b      	mov	r3, fp
+10001326:	1900      	adds	r0, r0, r4
+10001328:	4169      	adcs	r1, r5
+1000132a:	2b00      	cmp	r3, #0
+1000132c:	db24      	blt.n	10001378 <__udivmoddi4+0x160>
+1000132e:	002b      	movs	r3, r5
+10001330:	465a      	mov	r2, fp
+10001332:	4644      	mov	r4, r8
+10001334:	40d3      	lsrs	r3, r2
+10001336:	002a      	movs	r2, r5
+10001338:	40e2      	lsrs	r2, r4
+1000133a:	001c      	movs	r4, r3
+1000133c:	465b      	mov	r3, fp
+1000133e:	0015      	movs	r5, r2
+10001340:	2b00      	cmp	r3, #0
+10001342:	db2a      	blt.n	1000139a <__udivmoddi4+0x182>
+10001344:	0026      	movs	r6, r4
+10001346:	409e      	lsls	r6, r3
+10001348:	0033      	movs	r3, r6
+1000134a:	0026      	movs	r6, r4
+1000134c:	4647      	mov	r7, r8
+1000134e:	40be      	lsls	r6, r7
+10001350:	0032      	movs	r2, r6
+10001352:	1a80      	subs	r0, r0, r2
+10001354:	4199      	sbcs	r1, r3
+10001356:	9000      	str	r0, [sp, #0]
+10001358:	9101      	str	r1, [sp, #4]
+1000135a:	e79f      	b.n	1000129c <__udivmoddi4+0x84>
+1000135c:	42a3      	cmp	r3, r4
+1000135e:	d8bc      	bhi.n	100012da <__udivmoddi4+0xc2>
+10001360:	e783      	b.n	1000126a <__udivmoddi4+0x52>
+10001362:	4642      	mov	r2, r8
+10001364:	2320      	movs	r3, #32
+10001366:	2100      	movs	r1, #0
+10001368:	1a9b      	subs	r3, r3, r2
+1000136a:	2200      	movs	r2, #0
+1000136c:	9100      	str	r1, [sp, #0]
+1000136e:	9201      	str	r2, [sp, #4]
+10001370:	2201      	movs	r2, #1
+10001372:	40da      	lsrs	r2, r3
+10001374:	9201      	str	r2, [sp, #4]
+10001376:	e786      	b.n	10001286 <__udivmoddi4+0x6e>
+10001378:	4642      	mov	r2, r8
+1000137a:	2320      	movs	r3, #32
+1000137c:	1a9b      	subs	r3, r3, r2
+1000137e:	002a      	movs	r2, r5
+10001380:	4646      	mov	r6, r8
+10001382:	409a      	lsls	r2, r3
+10001384:	0023      	movs	r3, r4
+10001386:	40f3      	lsrs	r3, r6
+10001388:	4644      	mov	r4, r8
+1000138a:	4313      	orrs	r3, r2
+1000138c:	002a      	movs	r2, r5
+1000138e:	40e2      	lsrs	r2, r4
+10001390:	001c      	movs	r4, r3
+10001392:	465b      	mov	r3, fp
+10001394:	0015      	movs	r5, r2
+10001396:	2b00      	cmp	r3, #0
+10001398:	dad4      	bge.n	10001344 <__udivmoddi4+0x12c>
+1000139a:	4642      	mov	r2, r8
+1000139c:	002f      	movs	r7, r5
+1000139e:	2320      	movs	r3, #32
+100013a0:	0026      	movs	r6, r4
+100013a2:	4097      	lsls	r7, r2
+100013a4:	1a9b      	subs	r3, r3, r2
+100013a6:	40de      	lsrs	r6, r3
+100013a8:	003b      	movs	r3, r7
+100013aa:	4333      	orrs	r3, r6
+100013ac:	e7cd      	b.n	1000134a <__udivmoddi4+0x132>
+100013ae:	46c0      	nop			; (mov r8, r8)
 
-1000130c <__clzdi2>:
-1000130c:	b510      	push	{r4, lr}
-1000130e:	2900      	cmp	r1, #0
-10001310:	d103      	bne.n	1000131a <__clzdi2+0xe>
-10001312:	f000 f807 	bl	10001324 <__clzsi2>
-10001316:	3020      	adds	r0, #32
-10001318:	e002      	b.n	10001320 <__clzdi2+0x14>
-1000131a:	0008      	movs	r0, r1
-1000131c:	f000 f802 	bl	10001324 <__clzsi2>
-10001320:	bd10      	pop	{r4, pc}
-10001322:	46c0      	nop			; (mov r8, r8)
+100013b0 <__clzdi2>:
+100013b0:	b510      	push	{r4, lr}
+100013b2:	2900      	cmp	r1, #0
+100013b4:	d103      	bne.n	100013be <__clzdi2+0xe>
+100013b6:	f000 f807 	bl	100013c8 <__clzsi2>
+100013ba:	3020      	adds	r0, #32
+100013bc:	e002      	b.n	100013c4 <__clzdi2+0x14>
+100013be:	0008      	movs	r0, r1
+100013c0:	f000 f802 	bl	100013c8 <__clzsi2>
+100013c4:	bd10      	pop	{r4, pc}
+100013c6:	46c0      	nop			; (mov r8, r8)
 
-10001324 <__clzsi2>:
-10001324:	211c      	movs	r1, #28
-10001326:	2301      	movs	r3, #1
-10001328:	041b      	lsls	r3, r3, #16
-1000132a:	4298      	cmp	r0, r3
-1000132c:	d301      	bcc.n	10001332 <__clzsi2+0xe>
-1000132e:	0c00      	lsrs	r0, r0, #16
-10001330:	3910      	subs	r1, #16
-10001332:	0a1b      	lsrs	r3, r3, #8
-10001334:	4298      	cmp	r0, r3
-10001336:	d301      	bcc.n	1000133c <__clzsi2+0x18>
-10001338:	0a00      	lsrs	r0, r0, #8
-1000133a:	3908      	subs	r1, #8
-1000133c:	091b      	lsrs	r3, r3, #4
-1000133e:	4298      	cmp	r0, r3
-10001340:	d301      	bcc.n	10001346 <__clzsi2+0x22>
-10001342:	0900      	lsrs	r0, r0, #4
-10001344:	3904      	subs	r1, #4
-10001346:	a202      	add	r2, pc, #8	; (adr r2, 10001350 <__clzsi2+0x2c>)
-10001348:	5c10      	ldrb	r0, [r2, r0]
-1000134a:	1840      	adds	r0, r0, r1
-1000134c:	4770      	bx	lr
-1000134e:	46c0      	nop			; (mov r8, r8)
-10001350:	02020304 	.word	0x02020304
-10001354:	01010101 	.word	0x01010101
+100013c8 <__clzsi2>:
+100013c8:	211c      	movs	r1, #28
+100013ca:	2301      	movs	r3, #1
+100013cc:	041b      	lsls	r3, r3, #16
+100013ce:	4298      	cmp	r0, r3
+100013d0:	d301      	bcc.n	100013d6 <__clzsi2+0xe>
+100013d2:	0c00      	lsrs	r0, r0, #16
+100013d4:	3910      	subs	r1, #16
+100013d6:	0a1b      	lsrs	r3, r3, #8
+100013d8:	4298      	cmp	r0, r3
+100013da:	d301      	bcc.n	100013e0 <__clzsi2+0x18>
+100013dc:	0a00      	lsrs	r0, r0, #8
+100013de:	3908      	subs	r1, #8
+100013e0:	091b      	lsrs	r3, r3, #4
+100013e2:	4298      	cmp	r0, r3
+100013e4:	d301      	bcc.n	100013ea <__clzsi2+0x22>
+100013e6:	0900      	lsrs	r0, r0, #4
+100013e8:	3904      	subs	r1, #4
+100013ea:	a202      	add	r2, pc, #8	; (adr r2, 100013f4 <__clzsi2+0x2c>)
+100013ec:	5c10      	ldrb	r0, [r2, r0]
+100013ee:	1840      	adds	r0, r0, r1
+100013f0:	4770      	bx	lr
+100013f2:	46c0      	nop			; (mov r8, r8)
+100013f4:	02020304 	.word	0x02020304
+100013f8:	01010101 	.word	0x01010101
 	...
 
-10001360 <memset>:
-10001360:	0003      	movs	r3, r0
-10001362:	1882      	adds	r2, r0, r2
-10001364:	4293      	cmp	r3, r2
-10001366:	d100      	bne.n	1000136a <memset+0xa>
-10001368:	4770      	bx	lr
-1000136a:	7019      	strb	r1, [r3, #0]
-1000136c:	3301      	adds	r3, #1
-1000136e:	e7f9      	b.n	10001364 <memset+0x4>
+10001404 <memset>:
+10001404:	0003      	movs	r3, r0
+10001406:	1882      	adds	r2, r0, r2
+10001408:	4293      	cmp	r3, r2
+1000140a:	d100      	bne.n	1000140e <memset+0xa>
+1000140c:	4770      	bx	lr
+1000140e:	7019      	strb	r1, [r3, #0]
+10001410:	3301      	adds	r3, #1
+10001412:	e7f9      	b.n	10001408 <memset+0x4>
 
-10001370 <_init>:
-10001370:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
-10001372:	46c0      	nop			; (mov r8, r8)
-10001374:	bcf8      	pop	{r3, r4, r5, r6, r7}
-10001376:	bc08      	pop	{r3}
-10001378:	469e      	mov	lr, r3
-1000137a:	4770      	bx	lr
+10001414 <_init>:
+10001414:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+10001416:	46c0      	nop			; (mov r8, r8)
+10001418:	bcf8      	pop	{r3, r4, r5, r6, r7}
+1000141a:	bc08      	pop	{r3}
+1000141c:	469e      	mov	lr, r3
+1000141e:	4770      	bx	lr
 
-1000137c <_fini>:
-1000137c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
-1000137e:	46c0      	nop			; (mov r8, r8)
-10001380:	bcf8      	pop	{r3, r4, r5, r6, r7}
-10001382:	bc08      	pop	{r3}
-10001384:	469e      	mov	lr, r3
-10001386:	4770      	bx	lr
+10001420 <_fini>:
+10001420:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+10001422:	46c0      	nop			; (mov r8, r8)
+10001424:	bcf8      	pop	{r3, r4, r5, r6, r7}
+10001426:	bc08      	pop	{r3}
+10001428:	469e      	mov	lr, r3
+1000142a:	4770      	bx	lr
 
-10001388 <cy_deviceIpBlockCfgPSoC6_02>:
-10001388:	0000 4020 0000 4024 0000 4000 0000 0000     .. @..$@...@....
-10001398:	0000 4023 0000 4030 0000 4031 0000 409f     ..#@..0@..1@...@
-100013a8:	0000 4022 0000 4010 0000 409d 2020 2020     .."@...@...@    
-100013b8:	1020 1010 1d10 801d 0017 0075 03ff 0206      .........u.....
-100013c8:	0006 0436 2010 0000 c07f 0000 0400 0000     ..6.. ..........
-100013d8:	0000 0000 1900 4b32 7d64 0000 0000 8000     ......2Kd}......
-100013e8:	0040 0b08 0010 0000 0000 01ff 0220 1f00     @........... ...
-100013f8:	8000 0400 08ff 1810 1000 1400 1800 1c00     ................
-10001408:	4440 4c48 0050 0000 1008 0000 0008 0000     @DHLP...........
-10001418:	0004 0000 1004 0000 1200 0000 2104 0000     .............!..
-10001428:	2100 0000 1600 0000 1140 0240 13c4 1300     .!......@.@.....
-10001438:	1380 13a0 1340 1388 13a8 0020 001c 0000     ....@..... .....
+1000142c <cy_deviceIpBlockCfgPSoC6_02>:
+1000142c:	0000 4020 0000 4024 0000 4000 0000 0000     .. @..$@...@....
+1000143c:	0000 4023 0000 4030 0000 4031 0000 409f     ..#@..0@..1@...@
+1000144c:	0000 4022 0000 4010 0000 409d 2020 2020     .."@...@...@    
+1000145c:	1020 1010 1d10 801d 0017 0075 03ff 0206      .........u.....
+1000146c:	0006 0436 2010 0000 c07f 0000 0400 0000     ..6.. ..........
+1000147c:	0000 0000 1900 4b32 7d64 0000 0000 8000     ......2Kd}......
+1000148c:	0040 0b08 0010 0000 0000 01ff 0220 1f00     @........... ...
+1000149c:	8000 0400 08ff 1810 1000 1400 1800 1c00     ................
+100014ac:	4440 4c48 0050 0000 1008 0000 0008 0000     @DHLP...........
+100014bc:	0004 0000 1004 0000 1200 0000 2104 0000     .............!..
+100014cc:	2100 0000 1600 0000 1140 0240 13c4 1300     .!......@.@.....
+100014dc:	1380 13a0 1340 1388 13a8 0020 001c 0000     ....@..... .....
 
-10001448 <systemIpcPipeConfigCm0.1>:
-10001448:	0003 0000 0001 0000 0001 0000 0000 0000     ................
-10001458:	0305 0060 0004 0000 0001 0000 0000 0000     ..`.............
-10001468:	0001 0000 0406 0060 0008 0000 02bc 0800     ......`.........
-10001478:	0a79 1000                                   y...
+100014ec <systemIpcPipeConfigCm0.1>:
+100014ec:	0003 0000 0001 0000 0001 0000 0000 0000     ................
+100014fc:	0305 0060 0004 0000 0001 0000 0000 0000     ..`.............
+1000150c:	0001 0000 0406 0060 0008 0000 02bc 0800     ......`.........
+1000151c:	0a79 1000                                   y...
 
-1000147c <__EH_FRAME_BEGIN__>:
-1000147c:	0000 0000                                   ....
+10001520 <__EH_FRAME_BEGIN__>:
+10001520:	0000 0000                                   ....

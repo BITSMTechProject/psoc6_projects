@@ -36,6 +36,7 @@
                 "../../mtb-pdl-cat1/cmsis/include",
                 "../../core-lib/include",
                 "../../mtb-pdl-cat1/drivers/include",
+                "../../mtb-pdl-cat1/drivers/source",
                 "../../mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB"
             ],
             "browse": {

@@ -30,7 +30,10 @@
       "system_psoc6.h": "c",
       "cy_device.h": "c",
       "cy_device_headers.h": "c",
-      "gpio_psoc6_02_124_bga.h": "c"
+      "gpio_psoc6_02_124_bga.h": "c",
+      "cy8c624abzi_s2d44.h": "c",
+      "cyhal_hw_types.h": "c",
+      "cyhal_hw_resources.h": "c"
     },
     "C_Cpp.dimInactiveRegions": false,
     "cortex-debug.variableUseNaturalFormat": false,
